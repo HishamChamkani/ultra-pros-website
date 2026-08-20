@@ -1,26 +1,155 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+/* ===========================================================================
+   Ultra Pros — design tokens
+   Source of truth: BRAND_GUIDELINES.md + CLAUDE.md §3.
+   Tailwind v4 configures the theme in CSS via @theme (there is NO
+   tailwind.config.ts in v4). The brand tokens below generate utilities such as
+   `bg-brand-yellow`, `text-brand-navy`, `border-brand-border`, `font-heading`.
+   Do not introduce hues outside tints/shades of these — see BRAND_GUIDELINES §3/§7.
+   =========================================================================== */
+@theme {
+  --color-brand-yellow: #ffb700;
+  --color-brand-yellow-tint: #fff4d6;
+  --color-brand-yellow-hover: #e5a400;
+  --color-brand-navy: #142232;
+  --color-brand-navy-tint: #22374d;
+  --color-brand-surface: #e8eef2;
+  --color-brand-border: #d7dee6;
+  --color-brand-text-secondary: #5b6b7c;
+  --color-brand-success: #1faa59;
+  --color-brand-error: #e5484d;
+}
+
+/* Fonts are injected by next/font (variables set on <html> in app/layout.tsx).
+   `@theme inline` makes the generated utilities reference the runtime CSS
+   variables via var(), instead of copying a static value at build time. */
+@theme inline {
+  --font-heading: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-sans: var(--font-inter), "Inter", sans-serif;
+}
+
+/* ---------------------------------------------------------------------------
+   shadcn/ui semantic tokens, mapped onto the brand palette so generated
+   primitives (button, input, dialog, ...) are on-brand out of the box.
+   Radius derives from --radius so `rounded-sm|md|lg` = 4 / 8 / 16px (CLAUDE.md §3).
+   --------------------------------------------------------------------------- */
 :root {
+  --radius: 8px;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #142232;
+
+  --card: #ffffff;
+  --card-foreground: #142232;
+
+  --popover: #ffffff;
+  --popover-foreground: #142232;
+
+  --primary: #ffb700;
+  --primary-foreground: #142232;
+
+  --secondary: #142232;
+  --secondary-foreground: #ffffff;
+
+  --muted: #e8eef2;
+  --muted-foreground: #5b6b7c;
+
+  --accent: #fff4d6;
+  --accent-foreground: #142232;
+
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+
+  --border: #d7dee6;
+  --input: #d7dee6;
+  --ring: #ffb700;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 8px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  /* Angular clipped corner echoing the logo's "L/flag" motif (BRAND_GUIDELINES §6).
+     `corner-clip` snips the top-right corner; used on badges / accent shapes. */
+  .corner-clip {
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+  }
+  .corner-clip-lg {
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  }
+
+  /* Radix accordion open/close animations (used by components/ui/accordion.tsx). */
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
 }
