@@ -34,15 +34,14 @@ export function Footer() {
           <div className="lg:pr-6">
             {/* White reversed logo variant for the dark section (BRAND_GUIDELINES §2) */}
             <Image
-              src="/logo/ultra-pros-logo-white.png"
+              src="/logo/ultra-pros-logo-white-trimmed.png"
               alt="Ultra Pros"
-              width={150}
-              height={61}
-              className="h-9 w-auto"
+              width={1113}
+              height={247}
+              className="h-11 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              A performance-driven digital marketing agency. We turn traffic
-              into revenue.
+              {siteConfig.slogan}
             </p>
             <ul className="mt-6 flex items-center gap-3">
               {siteConfig.socials.map((social) => {

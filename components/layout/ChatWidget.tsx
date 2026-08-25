@@ -43,14 +43,8 @@ function getBotResponse(input: string): BotReply {
 
   if (has("service", "offer", "what do you do", "help with"))
     return {
-      text: "We're a full-funnel agency: social media, paid/performance marketing, SEO, web development, branding, and content. Explore them all:",
+      text: "We're a full-service agency: social media marketing, e-commerce solutions, branding & designing, video editing, web & app development, and software development & AI automations. Explore them all:",
       link: { label: "View services", href: "/services" },
-    };
-
-  if (has("seo", "rank", "google", "search"))
-    return {
-      text: "Our SEO work combines technical fixes, content, and authority building to move the rankings that drive real leads.",
-      link: { label: "SEO service", href: "/services/seo" },
     };
 
   if (has("social", "instagram", "tiktok", "facebook"))
@@ -59,16 +53,34 @@ function getBotResponse(input: string): BotReply {
       link: { label: "Social media service", href: "/services/social-media-marketing" },
     };
 
-  if (has("ad", "ads", "paid", "ppc", "roas"))
+  if (has("ecommerce", "e-commerce", "shop", "store", "sell", "order", "cart", "shopify"))
     return {
-      text: "Our paid media is engineered around your ROAS and CAC targets — not impressions.",
-      link: { label: "Paid marketing service", href: "/services/paid-marketing" },
+      text: "We design and build online stores optimized to turn browsers into buyers — storefront, checkout, and retention.",
+      link: { label: "E-commerce service", href: "/services/ecommerce-solutions" },
     };
 
-  if (has("web", "website", "site", "development"))
+  if (has("brand", "branding", "logo", "identity", "design"))
     return {
-      text: "We design and build fast, conversion-focused websites that turn visitors into customers.",
-      link: { label: "Web development service", href: "/services/web-development" },
+      text: "We craft bold, cohesive brand identities and design systems that make you instantly recognizable.",
+      link: { label: "Branding service", href: "/services/branding-designing" },
+    };
+
+  if (has("video", "edit", "reel", "reels", "footage", "youtube"))
+    return {
+      text: "We turn raw footage into scroll-stopping short-form and polished brand videos, edited for each platform.",
+      link: { label: "Video editing service", href: "/services/video-editing" },
+    };
+
+  if (has("software", "ai", "automation", "automate", "chatbot", "saas", "integration"))
+    return {
+      text: "We build custom software and AI automations — chatbots, workflow bots, and integrations — that cut manual work and scale your business.",
+      link: { label: "Software & AI service", href: "/services/software-ai-automations" },
+    };
+
+  if (has("web", "website", "site", "app", "development"))
+    return {
+      text: "We design and build fast, conversion-focused websites and apps that turn visitors into customers.",
+      link: { label: "Web & app development service", href: "/services/web-app-development" },
     };
 
   if (has("portfolio", "case study", "case studies", "work", "results", "proof"))

@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/content/site";
 import { Hero } from "@/components/home/Hero";
 import { TrustBar } from "@/components/home/TrustBar";
+import { IndustriesStrip } from "@/components/home/IndustriesStrip";
 import { StatsBand } from "@/components/layout/StatsBand";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { FeaturedCaseStudies } from "@/components/home/FeaturedCaseStudies";
@@ -56,6 +57,7 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <Hero />
       <TrustBar />
+      <IndustriesStrip />
       <StatsBand stats={stats} />
       <ServicesOverview />
       <FeaturedCaseStudies />

@@ -18,15 +18,17 @@ export const hero = {
 } as const;
 
 export const trustBar = {
-  title: "Industry leaders trust us",
-  // Placeholder client names — rendered as simple wordmarks until real logos exist.
+  title: "Trusted by",
+  // Real client logos live in /public/clients. `src` points at the current
+  // (placeholder-quality) logo files; swap for cleaned/vectorized assets when
+  // the client supplies final artwork. `name` doubles as the image alt text.
   logos: [
-    "Northwind",
-    "Vertex Retail",
-    "Lumen Health",
-    "Coastline Realty",
-    "Bytewave",
-    "Orchard & Co.",
+    { name: "Arfa Karim Technology Incubator", src: "/clients/arfa-karim-logo.png" },
+    { name: "HAQ Electronics", src: "/clients/haq-electronics-logo.png" },
+    { name: "BioGlobal", src: "/clients/bio-global-logo.png" },
+    { name: "Doxa Fabric Paints", src: "/clients/doxa-fabrics-logo.png" },
+    { name: "Iqra Trading International", src: "/clients/iqra-trading-logo.png" },
+    { name: "UltraSecure", src: "/clients/ultra-secure-logo.png" },
   ],
 } as const;
 
@@ -36,13 +38,15 @@ export type Stat = {
   prefix?: string;
   suffix?: string;
   decimals?: number;
+  /** Static text override — renders verbatim instead of the animated count-up. */
+  text?: string;
 };
 
 export const stats: Stat[] = [
-  { value: 8, suffix: "+", label: "Years Active" },
-  { value: 500, suffix: "+", label: "Projects Delivered" },
-  { value: 200, suffix: "+", label: "Clients Served" },
-  { value: 181, prefix: "$", suffix: "M", label: "Client Revenue" },
+  { value: 2025, text: "Since 2025", label: "Established" },
+  { value: 100, suffix: "+", label: "Projects Delivered" },
+  { value: 80, suffix: "+", label: "Clients Served" },
+  { value: 70, prefix: "$", suffix: "M+", label: "Client Revenue Generated" },
 ];
 
 export type CaseStudyTeaser = {
@@ -53,34 +57,35 @@ export type CaseStudyTeaser = {
   result: string;
 };
 
+// Real client names; result copy is placeholder until client-approved (see content/case-studies.ts).
 export const featuredCaseStudies: CaseStudyTeaser[] = [
   {
-    slug: "northwind-ecommerce",
-    client: "Northwind",
-    industry: "E-commerce",
-    tags: ["Paid Media", "SEO"],
-    result: "3.2× ROAS in 90 days",
+    slug: "haq-electronics",
+    client: "HAQ Electronics",
+    industry: "Electronics",
+    tags: ["E-commerce", "Social Media"],
+    result: "3.1× online sales in 6 months",
   },
   {
-    slug: "lumen-health",
-    client: "Lumen Health",
-    industry: "Healthcare",
-    tags: ["Social", "Content"],
-    result: "20K+ appointments booked",
+    slug: "bioglobal",
+    client: "BioGlobal",
+    industry: "Pharmaceutical",
+    tags: ["Branding", "Web & App"],
+    result: "Full rebrand at market launch",
   },
   {
-    slug: "coastline-realty",
-    client: "Coastline Realty",
-    industry: "Real Estate",
-    tags: ["Web Development", "SEO"],
-    result: "68% more qualified leads",
+    slug: "doxa-fabric-paints",
+    client: "Doxa Fabric Paints",
+    industry: "Arts & Crafts",
+    tags: ["Social Media", "Video Editing"],
+    result: "12M+ video views",
   },
   {
-    slug: "bytewave-saas",
-    client: "Bytewave",
-    industry: "SaaS",
-    tags: ["Performance", "Branding"],
-    result: "$1.4M pipeline in Q1",
+    slug: "arfa-karim-incubator",
+    client: "Arfa Karim Technology Incubator",
+    industry: "Information Technology",
+    tags: ["Web & App", "Software & AI"],
+    result: "Incubator platform rebuilt",
   },
 ];
 
@@ -120,7 +125,7 @@ export const whyUltraPros: ValueProp[] = [
     icon: "layers",
     title: "Full-funnel, in-house",
     description:
-      "Paid, SEO, social, web, and creative under one roof — no finger-pointing between three different agencies.",
+      "Social, e-commerce, branding, video, web, and software under one roof — no finger-pointing between three different agencies.",
   },
   {
     icon: "line-chart",
@@ -143,34 +148,36 @@ export type Testimonial = {
   company: string;
 };
 
+// Real client company names; quotes and people are PLACEHOLDER until real
+// client-approved testimonials are provided before launch.
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Ultra Pros doubled our qualified leads in a single quarter and actually explained how. We finally have a marketing partner we trust.",
+      "Ultra Pros took us online and actually explained how. We finally have a partner we trust.",
     name: "Sarah Malik",
     role: "Head of Growth",
-    company: "Northwind",
+    company: "HAQ Electronics",
   },
   {
     quote:
-      "They rebuilt our funnel and our site in six weeks. ROAS went from break-even to 3.2×. No fluff, just results.",
+      "They shipped our product and our brand in six weeks. No fluff, just results.",
     name: "David Chen",
     role: "Founder",
-    company: "Bytewave",
+    company: "UltraSecure",
   },
   {
     quote:
-      "The team moves fast and treats our budget like their own. Best agency decision we've made in years.",
+      "The team moves fast and treats our budget like their own. Best decision we've made in years.",
     name: "Ayesha Khan",
     role: "Marketing Director",
-    company: "Lumen Health",
+    company: "BioGlobal",
   },
   {
     quote:
       "Clear reporting, real strategy, and a crew that actually picks up the phone. Ultra Pros delivers.",
     name: "Marco Reyes",
-    role: "CEO",
-    company: "Coastline Realty",
+    role: "Program Director",
+    company: "Arfa Karim Technology Incubator",
   },
 ];
 

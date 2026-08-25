@@ -1,5 +1,5 @@
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { story } from "@/content/about";
 
 export function Story() {
@@ -25,7 +25,7 @@ export function Story() {
         {/* Visual — decorative panel (no photo asset yet) */}
         <div className="relative">
           <div className="relative overflow-hidden rounded-lg bg-brand-navy p-8 shadow-xl sm:p-10">
-            <LMark aria-hidden className="absolute right-6 top-6 h-10 w-10 opacity-90" />
+            <LogoMark className="pointer-events-none absolute right-6 top-6 h-7 w-7 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
             <p className="font-heading text-sm font-medium uppercase tracking-[0.05em] text-white/60">
               Established
             </p>

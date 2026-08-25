@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { Linkedin } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { team } from "@/content/team";
 
 function initials(name: string) {
@@ -29,19 +30,31 @@ export function Team() {
           {team.map((member) => (
             <li key={member.name}>
               <Card hoverable className="overflow-hidden">
-                {/* Initials avatar — replace with real headshots (see content/team.ts) */}
-                <div className="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-                  <LMark aria-hidden className="absolute right-3 top-3 h-6 w-6 opacity-80" />
-                  <span className="font-heading text-4xl font-bold text-white/80">
-                    {initials(member.name)}
-                  </span>
+                {/* Full-bleed 4:5 portrait headshot — edge-to-edge at the top of the
+                    card. object-top keeps faces in frame; consistent for all members. */}
+                <div className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-brand-navy to-brand-navy-tint">
+                  <LogoMark className="pointer-events-none absolute right-3 top-3 z-10 h-6 w-6 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={`${member.name}, ${member.role} at Ultra Pros`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover object-top"
+                    />
+                  ) : (
+                    // Initials fallback — replace with a real headshot (see content/team.ts)
+                    <span className="font-heading text-5xl font-bold text-white/80">
+                      {initials(member.name)}
+                    </span>
+                  )}
                 </div>
-                <div className="flex items-center justify-between gap-3 p-5">
-                  <div>
-                    <p className="font-heading text-lg font-semibold text-brand-navy">
+                <div className="flex items-center justify-between gap-3 px-4 py-3">
+                  <div className="min-w-0">
+                    <p className="font-heading text-base font-semibold leading-tight text-brand-navy">
                       {member.name}
                     </p>
-                    <p className="text-sm text-brand-text-secondary">
+                    <p className="mt-0.5 text-sm leading-tight text-brand-text-secondary">
                       {member.role}
                     </p>
                   </div>

@@ -58,7 +58,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Primary"
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-20 lg:px-8"
+        className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:h-[86px] lg:px-8"
       >
         {/* Logo */}
         <Link
@@ -67,12 +67,12 @@ export function Navbar() {
           aria-label="Ultra Pros — home"
         >
           <Image
-            src="/logo/ultra-pros-logo.png"
+            src="/logo/ultra-pros-logo-trimmed.png"
             alt="Ultra Pros"
-            width={133}
-            height={50}
+            width={1125}
+            height={247}
             priority
-            className="h-8 w-auto lg:h-9"
+            className="h-10 w-auto lg:h-11"
           />
         </Link>
 
@@ -99,19 +99,14 @@ export function Navbar() {
 
                 {/* Dropdown — revealed on hover / keyboard focus within the group */}
                 <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                  <ul className="w-80 rounded-lg border border-brand-border bg-white p-2 shadow-lg">
+                  <ul className="w-64 rounded-lg border border-brand-border bg-white p-2 shadow-lg">
                     {services.map((service) => (
                       <li key={service.slug}>
                         <Link
                           href={service.href}
-                          className="block rounded-md p-3 transition-colors hover:bg-brand-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow"
+                          className="block rounded-md px-3 py-2.5 font-heading text-sm font-semibold text-brand-navy transition-colors hover:bg-brand-surface hover:text-brand-yellow-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow"
                         >
-                          <span className="block font-heading text-sm font-semibold text-brand-navy">
-                            {service.title}
-                          </span>
-                          <span className="mt-0.5 block text-sm text-brand-text-secondary">
-                            {service.blurb}
-                          </span>
+                          {service.title}
                         </Link>
                       </li>
                     ))}
@@ -182,13 +177,13 @@ export function Navbar() {
             mobileOpen ? "translate-x-0" : "translate-x-full",
           )}
         >
-          <div className="flex h-16 items-center justify-between border-b border-brand-border px-4">
+          <div className="flex h-20 items-center justify-between border-b border-brand-border px-4">
             <Image
-              src="/logo/ultra-pros-logo.png"
+              src="/logo/ultra-pros-logo-trimmed.png"
               alt="Ultra Pros"
-              width={120}
-              height={45}
-              className="h-8 w-auto"
+              width={1125}
+              height={247}
+              className="h-9 w-auto"
             />
             <button
               type="button"

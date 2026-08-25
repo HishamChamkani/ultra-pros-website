@@ -3,9 +3,10 @@
  * Used by: the nav dropdown + footer (via content/site.ts), the home services
  * grid, the /services overview, and the /services/[slug] detail pages.
  *
- * All copy is real Ultra Pros brand-voice content (BRAND_GUIDELINES §5), not
- * placeholder. Case-study slugs link to /portfolio/[slug] (built in Prompt 6)
- * and will 404 until then.
+ * Copy is Ultra Pros brand-voice content (BRAND_GUIDELINES §5). Newer services
+ * carry placeholder copy in the same style — refine with the client before
+ * launch. Each caseStudy links to a /portfolio/[slug] entry in
+ * content/case-studies.ts.
  */
 import type { ServiceIconName } from "@/components/ui/service-icons";
 
@@ -82,172 +83,70 @@ export const services: Service[] = [
       },
     ],
     caseStudy: {
-      client: "Lumen Health",
-      industry: "Healthcare",
-      result: "20K+ appointments booked",
-      slug: "lumen-health",
-      tags: ["Social", "Content"],
+      client: "HAQ Electronics",
+      industry: "Electronics",
+      result: "3.1× social-driven sales",
+      slug: "haq-electronics",
+      tags: ["Social Media", "E-commerce"],
     },
   },
   {
-    slug: "paid-marketing",
-    title: "Paid / Performance Marketing",
-    icon: "target",
-    blurb: "Ad campaigns engineered for measurable ROI.",
-    href: "/services/paid-marketing",
+    slug: "ecommerce-solutions",
+    title: "E-commerce Solutions",
+    icon: "shopping-cart",
+    blurb: "Online stores built to convert browsers into buyers.",
+    href: "/services/ecommerce-solutions",
     heroCopy:
-      "Every dollar should come back with friends. We plan, launch, and relentlessly optimize paid campaigns across search, social, and display — engineered around your CAC and ROAS targets, not impressions.",
+      "A great product deserves a store that actually sells it. We design, build, and optimize e-commerce experiences — from storefront to checkout to retention — that turn traffic into orders and first-time buyers into repeat customers.",
     whatsIncluded: [
-      "Full-funnel strategy across Google, Meta, TikTok, and LinkedIn Ads",
-      "Conversion tracking, pixel, and server-side setup done right",
-      "Ad creative and copy testing at scale",
-      "Landing page and offer optimization",
-      "Budget pacing and bid-strategy management",
-      "Weekly performance reviews with ROAS and CAC reporting",
-    ],
-    process: [
-      {
-        title: "Audit & Discover",
-        description:
-          "We map your funnel, tracking, and unit economics to set the right targets.",
-      },
-      {
-        title: "Strategize",
-        description:
-          "We build the channel mix, budget plan, and creative-testing roadmap.",
-      },
-      {
-        title: "Launch & Test",
-        description:
-          "We ship campaigns fast and test creative, audiences, and offers systematically.",
-      },
-      {
-        title: "Scale & Optimize",
-        description:
-          "We scale winners, kill losers, and protect your CAC as spend grows.",
-      },
-      {
-        title: "Report",
-        description:
-          "Transparent weekly reporting tied to revenue and pipeline.",
-      },
-    ],
-    caseStudy: {
-      client: "Northwind",
-      industry: "E-commerce",
-      result: "3.2× ROAS in 90 days",
-      slug: "northwind-ecommerce",
-      tags: ["Paid Media", "SEO"],
-    },
-  },
-  {
-    slug: "seo",
-    title: "SEO",
-    icon: "search",
-    blurb: "Rank higher and turn search traffic into revenue.",
-    href: "/services/seo",
-    heroCopy:
-      "Search is the highest-intent traffic you'll ever get — and it compounds. We combine technical SEO, content, and authority building to move the rankings that actually drive qualified leads and sales.",
-    whatsIncluded: [
-      "Technical SEO audits and fixes (speed, crawlability, Core Web Vitals)",
-      "Keyword and search-intent research mapped to your funnel",
-      "On-page optimization and content briefs",
-      "Authority building and digital-PR link acquisition",
-      "Local SEO and Google Business Profile optimization",
-      "Monthly ranking, traffic, and conversion reporting",
-    ],
-    process: [
-      {
-        title: "Audit & Discover",
-        description:
-          "A full technical, content, and backlink audit to find what's holding you back.",
-      },
-      {
-        title: "Strategize",
-        description:
-          "We prioritize a roadmap by impact and effort, targeting the keywords that convert.",
-      },
-      {
-        title: "Execute",
-        description:
-          "We fix technical issues, optimize pages, and publish content built to rank.",
-      },
-      {
-        title: "Build Authority",
-        description:
-          "We earn the links and mentions that move competitive rankings.",
-      },
-      {
-        title: "Report",
-        description:
-          "Monthly reporting on rankings, organic traffic, and revenue.",
-      },
-    ],
-    caseStudy: {
-      client: "Coastline Realty",
-      industry: "Real Estate",
-      result: "68% more qualified leads",
-      slug: "coastline-realty",
-      tags: ["Web Development", "SEO"],
-    },
-  },
-  {
-    slug: "web-development",
-    title: "Web Development",
-    icon: "code",
-    blurb: "Fast, conversion-focused websites that perform.",
-    href: "/services/web-development",
-    heroCopy:
-      "Your website is your hardest-working salesperson. We design and build fast, SEO-ready sites that load in a blink and turn visitors into customers — not just pretty pages that sit there.",
-    whatsIncluded: [
-      "Custom design and development (Next.js, WordPress, Shopify)",
-      "Mobile-first, responsive builds tested across devices",
-      "Core Web Vitals and performance optimization",
-      "Conversion-focused UX and landing pages",
-      "SEO-ready structure, schema, and analytics setup",
-      "Ongoing maintenance and support options",
+      "Storefront design and build (Shopify, WooCommerce, custom)",
+      "Product page, cart, and checkout conversion optimization",
+      "Payment, shipping, and inventory integrations",
+      "Product feed setup for Google Shopping and Meta catalogs",
+      "Email and SMS flows for abandoned carts and retention",
+      "Analytics, A/B testing, and ongoing CRO",
     ],
     process: [
       {
         title: "Discover",
         description:
-          "We map your goals, users, and the actions that matter before a pixel is drawn.",
+          "We map your catalog, customers, and margins to prioritize what will move revenue.",
       },
       {
-        title: "Design",
+        title: "Design & Build",
         description:
-          "We design conversion-first layouts, on-brand and built to guide the visitor.",
+          "We build a fast, mobile-first store designed around a frictionless path to purchase.",
       },
       {
-        title: "Build",
+        title: "Integrate",
         description:
-          "We develop fast, accessible, SEO-ready pages with clean, maintainable code.",
+          "We wire up payments, shipping, inventory, and your marketing stack cleanly.",
       },
       {
-        title: "Launch & QA",
+        title: "Launch & Optimize",
         description:
-          "We test across devices, optimize performance, and launch without surprises.",
+          "We launch, then A/B test pages, offers, and flows to lift conversion and AOV.",
       },
       {
-        title: "Optimize",
+        title: "Report",
         description:
-          "We track behavior and iterate on what lifts conversions.",
+          "Monthly reporting on revenue, conversion rate, and customer lifetime value.",
       },
     ],
     caseStudy: {
-      client: "Bytewave",
-      industry: "SaaS",
-      result: "$1.4M pipeline in Q1",
-      slug: "bytewave-saas",
-      tags: ["Performance", "Branding"],
+      client: "Iqra Trading International",
+      industry: "Medical Equipment & Supplies",
+      result: "45% more online orders",
+      slug: "iqra-trading-international",
+      tags: ["E-commerce", "Web & App"],
     },
   },
   {
-    slug: "branding-design",
-    title: "Branding & Design",
+    slug: "branding-designing",
+    title: "Branding & Designing",
     icon: "palette",
     blurb: "Sharp, memorable identities that stand out.",
-    href: "/services/branding-design",
+    href: "/services/branding-designing",
     heroCopy:
       "In a crowded feed, forgettable is fatal. We craft bold, cohesive brand identities and design systems that make you instantly recognizable — and impossible to ignore.",
     whatsIncluded: [
@@ -281,62 +180,160 @@ export const services: Service[] = [
       },
     ],
     caseStudy: {
-      client: "Vertex Retail",
-      industry: "Retail",
-      result: "2× brand recall after refresh",
-      slug: "vertex-retail",
-      tags: ["Branding", "Content"],
+      client: "BioGlobal",
+      industry: "Pharmaceutical",
+      result: "Full rebrand at market launch",
+      slug: "bioglobal",
+      tags: ["Branding", "Web & App"],
     },
   },
   {
-    slug: "content-creation",
-    title: "Content Creation",
-    icon: "pen-tool",
-    blurb: "Scroll-stopping content that drives action.",
-    href: "/services/content-creation",
+    slug: "video-editing",
+    title: "Video Editing",
+    icon: "video",
+    blurb: "Scroll-stopping video that holds attention and sells.",
+    href: "/services/video-editing",
     heroCopy:
-      "Content is the fuel behind every channel you run. We produce scroll-stopping video, graphics, and copy — built for the platform, the audience, and the exact action you want them to take.",
+      "Video is the format every platform rewards — if it's cut right. We turn raw footage into scroll-stopping short-form, polished brand films, and product videos edited for the platform, the audience, and the action you want.",
     whatsIncluded: [
-      "Short-form video for TikTok, Reels, and Shorts",
-      "Photography and graphic design",
-      "Copywriting for ads, email, and web",
-      "Blog and long-form content production",
-      "Content repurposing across channels",
-      "Content calendars and production workflows",
+      "Short-form editing for Reels, TikTok, and Shorts",
+      "Long-form brand films, explainers, and product videos",
+      "Motion graphics, titles, and animated captions",
+      "Color grading and audio mixing",
+      "Thumbnail design and platform-ready exports",
+      "Repurposing one shoot into a full content library",
+    ],
+    process: [
+      {
+        title: "Brief",
+        description:
+          "We align on goals, platforms, and the story each video needs to tell.",
+      },
+      {
+        title: "Assemble",
+        description:
+          "We cut the core edit — pacing, structure, and hook — for a first review.",
+      },
+      {
+        title: "Polish",
+        description:
+          "We add motion graphics, captions, color, and sound to finish the piece.",
+      },
+      {
+        title: "Deliver & Repurpose",
+        description:
+          "We export platform-ready versions and slice extra cutdowns from the footage.",
+      },
+    ],
+    caseStudy: {
+      client: "Doxa Fabric Paints",
+      industry: "Arts & Crafts",
+      result: "12M+ video views",
+      slug: "doxa-fabric-paints",
+      tags: ["Video Editing", "Social Media"],
+    },
+  },
+  {
+    slug: "web-app-development",
+    title: "Web & App Development",
+    icon: "code",
+    blurb: "Fast, conversion-focused websites and apps that perform.",
+    href: "/services/web-app-development",
+    heroCopy:
+      "Your website and app are your hardest-working salespeople. We design and build fast, SEO-ready websites and mobile/web apps that load in a blink and turn visitors into customers — not just pretty screens that sit there.",
+    whatsIncluded: [
+      "Custom web design and development (Next.js, WordPress, Shopify)",
+      "Cross-platform mobile and web app development",
+      "Mobile-first, responsive builds tested across devices",
+      "Core Web Vitals and performance optimization",
+      "Conversion-focused UX, landing pages, and app flows",
+      "SEO-ready structure, schema, and analytics setup",
+      "Ongoing maintenance and support options",
     ],
     process: [
       {
         title: "Discover",
         description:
-          "We learn your brand voice, audience, and the platforms that matter.",
+          "We map your goals, users, and the actions that matter before a pixel is drawn.",
       },
       {
-        title: "Plan",
+        title: "Design",
         description:
-          "We build a content plan and calendar mapped to your campaigns.",
+          "We design conversion-first layouts and app flows, on-brand and built to guide the user.",
       },
       {
-        title: "Produce",
+        title: "Build",
         description:
-          "Our creators shoot, design, and write content built to perform.",
+          "We develop fast, accessible, SEO-ready products with clean, maintainable code.",
       },
       {
-        title: "Publish & Repurpose",
+        title: "Launch & QA",
         description:
-          "We ship on schedule and stretch every asset across channels.",
+          "We test across devices, optimize performance, and launch without surprises.",
       },
       {
-        title: "Report",
+        title: "Optimize",
         description:
-          "We track what resonates and refine the content engine.",
+          "We track behavior and iterate on what lifts conversions.",
       },
     ],
     caseStudy: {
-      client: "Lumen Health",
-      industry: "Healthcare",
-      result: "3.5× engagement in 60 days",
-      slug: "lumen-health",
-      tags: ["Content", "Social"],
+      client: "Arfa Karim Technology Incubator",
+      industry: "Information Technology",
+      result: "Incubator platform rebuilt",
+      slug: "arfa-karim-incubator",
+      tags: ["Web & App", "Software & AI"],
+    },
+  },
+  {
+    slug: "software-ai-automations",
+    title: "Software Development & AI Automations",
+    icon: "cpu",
+    blurb: "Custom software and AI automations that scale your business.",
+    href: "/services/software-ai-automations",
+    heroCopy:
+      "Off-the-shelf tools only get you so far. We design and build custom software, internal tools, and AI automations — chatbots, workflow bots, and integrations — that cut manual work and unlock what your business couldn't do before.",
+    whatsIncluded: [
+      "Custom web and SaaS application development",
+      "AI automations: chatbots, assistants, and workflow bots",
+      "Business-process automation and third-party integrations",
+      "API design, development, and integration",
+      "Data pipelines, dashboards, and internal tools",
+      "Cloud deployment, scaling, and ongoing support",
+    ],
+    process: [
+      {
+        title: "Discover",
+        description:
+          "We map your workflows, data, and the outcomes that matter before writing any code.",
+      },
+      {
+        title: "Scope & Architect",
+        description:
+          "We define the solution, tech stack, and architecture with a clear, phased roadmap.",
+      },
+      {
+        title: "Build",
+        description:
+          "We develop in tight iterations, shipping working software you can test early and often.",
+      },
+      {
+        title: "Integrate & Test",
+        description:
+          "We connect your tools, harden the system, and test rigorously before launch.",
+      },
+      {
+        title: "Deploy & Support",
+        description:
+          "We ship to production and provide monitoring, iteration, and ongoing support.",
+      },
+    ],
+    caseStudy: {
+      client: "UltraSecure",
+      industry: "Cybersecurity",
+      result: "Security platform MVP shipped",
+      slug: "ultrasecure",
+      tags: ["Software & AI", "Branding"],
     },
   },
 ];

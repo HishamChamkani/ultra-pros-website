@@ -2,30 +2,35 @@
  * Case study content (CLAUDE.md §7 — typed copy, brand voice per BRAND_GUIDELINES §5).
  * Powers the /portfolio filterable grid and /portfolio/[slug] detail pages.
  *
- * All clients, metrics, and quotes are realistic placeholders, not real accounts.
- * Slugs here are also referenced by the home page and service pages — keep them
- * stable. Imagery is rendered as branded placeholder tiles (no photo assets yet).
+ * ⚠️ PLACEHOLDER RESULTS — client NAMES and industries below are real Ultra Pros
+ * clients, but every metric, result headline, challenge, strategy, and quote is
+ * PLAUSIBLE PLACEHOLDER copy written from each client's industry. All of it must
+ * be replaced with real, client-approved numbers and details before public launch.
+ *
+ * Slugs here are referenced by the home page and the service pages — keep them stable.
+ *
+ * `cover` images (/public/images/portfolio/*) are STOCK/PLACEHOLDER assets sourced
+ * from the internet, NOT real client work — replace with real client photography
+ * before launch. The `gallery` fields are still text tiles.
  */
 
 export const serviceCategories = [
   "Social Media",
-  "Paid Media",
-  "SEO",
-  "Web Development",
+  "E-commerce",
   "Branding",
-  "Content",
+  "Video Editing",
+  "Web & App",
+  "Software & AI",
 ] as const;
 export type ServiceCategory = (typeof serviceCategories)[number];
 
 export const industries = [
-  "E-commerce",
-  "Healthcare",
-  "Real Estate",
-  "SaaS",
-  "Retail",
-  "Restaurant",
-  "Fitness",
-  "Education",
+  "Electronics",
+  "Pharmaceutical",
+  "Arts & Crafts",
+  "Medical Equipment & Supplies",
+  "Cybersecurity",
+  "Information Technology",
 ] as const;
 export type Industry = (typeof industries)[number];
 
@@ -48,218 +53,176 @@ export type CaseStudy = {
   strategyIntro: string;
   strategyPoints: string[];
   metrics: CaseMetric[];
+  /** Cover image — stock/placeholder, replace with real client work before launch. */
+  cover: string;
   /** Placeholder gallery tile labels (swap for real images later). */
   gallery: string[];
 };
 
+// ⚠️ Every `metrics`, `resultHeadline`, `challenge`, and `strategy*` value below is
+// placeholder copy — replace with real client-approved results before launch.
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "northwind-ecommerce",
-    client: "Northwind",
-    industry: "E-commerce",
-    services: ["Paid Media", "SEO"],
-    resultHeadline: "3.2× ROAS in 90 days",
+    slug: "haq-electronics",
+    client: "HAQ Electronics",
+    industry: "Electronics",
+    services: ["E-commerce", "Social Media"],
+    resultHeadline: "3.1× online sales in 6 months",
     summary:
-      "Scaling a home-goods store from break-even ads to a 3.2× return in a single quarter.",
+      "Turning a well-known local electronics retailer into a social-first online store that sells around the clock.",
     challenge:
-      "Northwind was spending heavily on Meta and Google with barely-there returns. Tracking was broken, the product feed was a mess, and every new campaign cannibalized the last. They were one bad month from cutting paid entirely.",
+      "HAQ Electronics had strong foot traffic but almost no online presence. Their catalog lived offline, social was inconsistent, and customers who searched online found competitors first.",
     strategyIntro:
-      "We rebuilt the foundation before touching a dollar of budget, then scaled what worked.",
+      "We built a conversion-ready store and a social engine to drive demand into it.",
     strategyPoints: [
-      "Fixed conversion tracking and rebuilt the product feed from scratch",
-      "Restructured campaigns around the highest-margin collections",
-      "Launched a systematic creative-testing framework",
-      "Tightened landing pages and post-purchase flows",
+      "Launched a fast, mobile-first storefront with the full product catalog",
+      "Built product feeds for Google Shopping and Meta catalogs",
+      "Produced platform-native social content around launches and deals",
+      "Set up abandoned-cart and retention flows",
     ],
     metrics: [
-      { value: 3.2, decimals: 1, suffix: "×", label: "Return on Ad Spend" },
-      { value: 47, suffix: "%", label: "Lower Cost per Acquisition" },
-      { value: 2.4, decimals: 1, suffix: "×", label: "Revenue Growth" },
-      { value: 90, suffix: " days", label: "To Profitability" },
+      { value: 3.1, decimals: 1, suffix: "×", label: "Online Sales" },
+      { value: 52, suffix: "%", label: "More Repeat Buyers" },
+      { value: 2.4, decimals: 1, suffix: "×", label: "Social Reach" },
+      { value: 6, suffix: " mo", label: "To Scale" },
     ],
-    gallery: ["Ad creative set", "Rebuilt product feed", "Performance dashboard"],
+    cover: "/images/portfolio/northwind-cover.jpeg",
+    gallery: ["Storefront redesign", "Product feed", "Social content set"],
   },
   {
-    slug: "lumen-health",
-    client: "Lumen Health",
-    industry: "Healthcare",
-    services: ["Social Media", "Content"],
-    resultHeadline: "20K+ appointments booked",
+    slug: "bioglobal",
+    client: "BioGlobal",
+    industry: "Pharmaceutical",
+    services: ["Branding", "Web & App"],
+    resultHeadline: "Full rebrand at market launch",
     summary:
-      "A multi-clinic health group turned dormant social channels into a real appointment pipeline.",
+      "A complete brand identity and corporate site for a pharmaceutical company entering new markets.",
     challenge:
-      "Lumen Health ran five clinics with no consistent voice. Their social channels were dormant, patient education was scattered, and appointment bookings relied entirely on referrals.",
+      "BioGlobal was expanding into new markets with an outdated identity and no cohesive digital presence. They needed a credible, compliant brand that could earn trust with partners and regulators.",
     strategyIntro:
-      "We built a patient-education content engine and made every post bookable.",
+      "We delivered a clean, credible identity system and a corporate site to match.",
     strategyPoints: [
-      "Built a content engine across Instagram and TikTok",
-      "Standardized brand voice and visuals across all five clinics",
-      "Produced short-form video answering the questions patients actually ask",
-      "Added click-to-book CTAs and tracked every conversion",
+      "Created a full brand identity — logo, palette, and guidelines",
+      "Designed compliant, professional marketing and sales collateral",
+      "Built a fast, accessible corporate website",
+      "Established a consistent voice across every touchpoint",
     ],
     metrics: [
-      { value: 20, suffix: "K+", label: "Appointments Booked" },
-      { value: 3.5, decimals: 1, suffix: "×", label: "Engagement Growth" },
-      { value: 120, suffix: "K", label: "Monthly Reach" },
-      { value: 5, label: "Clinics Unified" },
+      { value: 1, label: "Unified Brand System" },
+      { value: 3, suffix: "×", label: "Site Engagement" },
+      { value: 40, suffix: "%", label: "Faster Page Load" },
+      { value: 100, suffix: "%", label: "On-Brand Collateral" },
     ],
-    gallery: ["Content calendar", "Short-form video", "Booking funnel"],
+    cover: "/images/portfolio/lumen-health-cover.jpeg",
+    gallery: ["Identity system", "Corporate site", "Sales collateral"],
   },
   {
-    slug: "coastline-realty",
-    client: "Coastline Realty",
-    industry: "Real Estate",
-    services: ["Web Development", "SEO"],
-    resultHeadline: "68% more qualified leads",
+    slug: "doxa-fabric-paints",
+    client: "Doxa Fabric Paints",
+    industry: "Arts & Crafts",
+    services: ["Social Media", "Video Editing"],
+    resultHeadline: "12M+ video views",
     summary:
-      "A rebuilt, search-optimized site turned a slow, invisible brokerage into a lead machine.",
+      "Turning a fabric-paint brand into a viral how-to content engine that crafters actually follow.",
     challenge:
-      "Coastline's website was slow, hard to search, and invisible on Google. Agents chased cold leads while high-intent buyers bounced before a single listing loaded.",
+      "Doxa made a product people loved but rarely saw. Their social was sporadic and their tutorials were long and hard to watch, so reach stayed flat despite a passionate niche audience.",
     strategyIntro:
-      "We rebuilt the site for speed and search, then captured the demand it unlocked.",
+      "We made the craft impossible to scroll past with short, satisfying video.",
     strategyPoints: [
-      "Rebuilt the site on Next.js with instant listing search",
-      "Fixed technical SEO and Core Web Vitals",
-      "Targeted high-intent local keywords by neighborhood",
-      "Added lead-capture flows wired into their CRM",
+      "Built a short-form video engine of quick, satisfying tutorials",
+      "Edited raw creator footage into platform-ready cutdowns",
+      "Ran a consistent posting calendar across Reels and TikTok",
+      "Grew and activated a genuinely engaged crafting community",
     ],
     metrics: [
-      { value: 68, suffix: "%", label: "More Qualified Leads" },
-      { value: 2.1, decimals: 1, suffix: "×", label: "Organic Traffic" },
-      { value: 0.9, decimals: 1, suffix: "s", label: "Page Load Time" },
-      { value: 38, suffix: "%", label: "Lower Bounce Rate" },
+      { value: 12, suffix: "M+", label: "Video Views" },
+      { value: 4.6, decimals: 1, suffix: "×", label: "Follower Growth" },
+      { value: 38, suffix: "%", label: "Higher Engagement" },
+      { value: 60, suffix: "+", label: "Videos Shipped" },
     ],
-    gallery: ["Homepage redesign", "Listing search", "Local landing pages"],
+    cover: "/images/portfolio/vertex-retail-cover.jpeg",
+    gallery: ["Tutorial series", "Short-form edits", "Community growth"],
   },
   {
-    slug: "bytewave-saas",
-    client: "Bytewave",
-    industry: "SaaS",
-    services: ["Paid Media", "Branding"],
-    resultHeadline: "$1.4M pipeline in Q1",
+    slug: "iqra-trading-international",
+    client: "Iqra Trading International",
+    industry: "Medical Equipment & Supplies",
+    services: ["E-commerce", "Web & App"],
+    resultHeadline: "45% more online orders",
     summary:
-      "A sharper brand and a full-funnel paid program turned clicks into real sales pipeline.",
+      "A B2B medical-supplies distributor moved its catalog online with a store built for bulk buyers.",
     challenge:
-      "Bytewave had a great product and a forgettable brand. Demos were flat, messaging was vague, and paid campaigns generated clicks but no pipeline.",
+      "Iqra Trading ran a large medical-supplies catalog entirely over phone and email. Buyers couldn't check availability or reorder easily, and the manual process capped how much the team could handle.",
     strategyIntro:
-      "We repositioned the brand, rebuilt the funnel, and aligned spend to pipeline.",
+      "We built a B2B store designed around how medical buyers actually purchase.",
     strategyPoints: [
-      "Repositioned the brand around a sharper value proposition",
-      "Redesigned the site and demo funnel for conversion",
-      "Launched full-funnel LinkedIn and Google campaigns",
-      "Aligned sales and marketing on one pipeline definition",
+      "Launched a searchable online catalog with bulk-order support",
+      "Added account-based pricing and fast reordering",
+      "Integrated inventory and shipping for accurate availability",
+      "Streamlined quote requests and order tracking",
     ],
     metrics: [
-      { value: 1.4, decimals: 1, prefix: "$", suffix: "M", label: "Pipeline Generated" },
-      { value: 3.2, decimals: 1, suffix: "×", label: "Demo Requests" },
-      { value: 52, suffix: "%", label: "Lower Cost per Lead" },
-      { value: 6, suffix: " wks", label: "To Rebrand & Launch" },
+      { value: 45, suffix: "%", label: "More Online Orders" },
+      { value: 2.2, decimals: 1, suffix: "×", label: "Reorder Rate" },
+      { value: 30, suffix: "%", label: "Less Manual Work" },
+      { value: 1000, suffix: "+", label: "SKUs Online" },
     ],
-    gallery: ["Brand system", "Demo funnel", "Campaign creative"],
+    cover: "/images/portfolio/coastline-realty-cover.jpeg",
+    gallery: ["B2B catalog", "Reorder flow", "Inventory sync"],
   },
   {
-    slug: "vertex-retail",
-    client: "Vertex Retail",
-    industry: "Retail",
-    services: ["Branding", "Content"],
-    resultHeadline: "2× brand recall after refresh",
+    slug: "ultrasecure",
+    client: "UltraSecure",
+    industry: "Cybersecurity",
+    services: ["Software & AI", "Branding"],
+    resultHeadline: "Security platform MVP shipped",
     summary:
-      "A 12-store retailer unified under one bold identity — and became recognizable everywhere.",
+      "Taking a cybersecurity startup from concept to a launched product with a brand to match.",
     challenge:
-      "Vertex had grown to 12 stores with mismatched signage, inconsistent packaging, and a logo from another decade. Customers didn't recognize them across locations.",
+      "UltraSecure had deep security expertise but no product and no brand. They needed to ship a credible MVP quickly to start onboarding early customers and raising confidence.",
     strategyIntro:
-      "We delivered one cohesive identity and a system to roll it out everywhere.",
+      "We built the product and the brand in parallel, on a tight timeline.",
     strategyPoints: [
-      "Delivered a complete brand identity and guidelines",
-      "Redesigned packaging, signage, and in-store collateral",
-      "Built a social content system to launch the new look",
-      "Trained store teams on consistent brand presentation",
+      "Designed and built the MVP web application",
+      "Automated threat-alert workflows and integrations",
+      "Created the brand identity and product UI system",
+      "Set up cloud deployment, monitoring, and iteration",
     ],
     metrics: [
-      { value: 2, suffix: "×", label: "Brand Recall" },
-      { value: 34, suffix: "%", label: "Social Engagement" },
-      { value: 12, label: "Stores Unified" },
-      { value: 28, suffix: "%", label: "Foot-Traffic Lift" },
+      { value: 1, label: "MVP Shipped" },
+      { value: 12, suffix: " wks", label: "Concept to Launch" },
+      { value: 3, suffix: "×", label: "Faster Onboarding" },
+      { value: 99.9, decimals: 1, suffix: "%", label: "Uptime Target" },
     ],
-    gallery: ["Identity system", "Packaging redesign", "In-store signage"],
+    cover: "/images/portfolio/bytewave-cover.jpeg",
+    gallery: ["Product UI", "Alert automations", "Brand system"],
   },
   {
-    slug: "sizzle-grill",
-    client: "Sizzle Grill",
-    industry: "Restaurant",
-    services: ["Social Media", "Paid Media"],
-    resultHeadline: "42% more table bookings",
+    slug: "arfa-karim-incubator",
+    client: "Arfa Karim Technology Incubator",
+    industry: "Information Technology",
+    services: ["Web & App", "Software & AI"],
+    resultHeadline: "Incubator platform rebuilt",
     summary:
-      "A local grill filled its empty weeknights with craveable content and geo-targeted offers.",
+      "A modern platform to help a technology incubator manage startups, mentors, and applications.",
     challenge:
-      "A popular local grill with empty weeknights. Great food, almost no online presence, and no way to fill tables outside the weekend rush.",
+      "The incubator was running applications, mentorship, and cohort tracking across spreadsheets and forms. It didn't scale, and founders and mentors had no single place to work.",
     strategyIntro:
-      "We made the food impossible to scroll past and gave locals a reason to come midweek.",
+      "We built one platform to run applications, cohorts, and mentorship end to end.",
     strategyPoints: [
-      "Built a mouth-watering short-form video content engine",
-      "Ran geo-targeted paid campaigns for weeknight offers",
-      "Set up online reservations and tracked every booking",
-      "Grew and activated a genuinely local following",
+      "Rebuilt the public site and application experience",
+      "Built a portal for founders, mentors, and program staff",
+      "Automated application intake, scoring, and status updates",
+      "Added dashboards for cohort progress and reporting",
     ],
     metrics: [
-      { value: 42, suffix: "%", label: "More Table Bookings" },
-      { value: 3.8, decimals: 1, suffix: "×", label: "Social Following" },
-      { value: 60, suffix: "%", label: "Fuller Weeknights" },
-      { value: 1.9, decimals: 1, suffix: "×", label: "Repeat Visits" },
+      { value: 1, label: "Unified Platform" },
+      { value: 60, suffix: "%", label: "Less Admin Time" },
+      { value: 3, suffix: "×", label: "Faster Intake" },
+      { value: 100, suffix: "+", label: "Startups Managed" },
     ],
-    gallery: ["Food video series", "Weeknight offer ads", "Reservation flow"],
-  },
-  {
-    slug: "peak-fitness",
-    client: "Peak Fitness",
-    industry: "Fitness",
-    services: ["Paid Media", "Web Development"],
-    resultHeadline: "1,200+ new memberships",
-    summary:
-      "Three new gym locations filled fast with a leak-proof funnel and location-targeted ads.",
-    challenge:
-      "Peak Fitness opened three new locations and needed members fast. Their sign-up page leaked leads and their ads targeted everyone and no one.",
-    strategyIntro:
-      "We fixed the funnel first, then poured targeted demand into it.",
-    strategyPoints: [
-      "Built a fast, mobile-first sign-up funnel",
-      "Launched location-targeted campaigns with free-trial offers",
-      "A/B tested offers and creative every week",
-      "Automated lead follow-up and trial-to-member conversion",
-    ],
-    metrics: [
-      { value: 1200, suffix: "+", label: "New Memberships" },
-      { value: 3, label: "Locations Filled" },
-      { value: 44, suffix: "%", label: "Lower Cost per Lead" },
-      { value: 2.6, decimals: 1, suffix: "×", label: "Trial Conversions" },
-    ],
-    gallery: ["Sign-up funnel", "Trial-offer ads", "Follow-up automation"],
-  },
-  {
-    slug: "brightpath-academy",
-    client: "BrightPath Academy",
-    industry: "Education",
-    services: ["SEO", "Content"],
-    resultHeadline: "3× organic enrollments",
-    summary:
-      "An academy went from invisible to page one for the courses parents actually search.",
-    challenge:
-      "BrightPath relied on word-of-mouth and paid ads that dried up the moment budget paused. They were invisible for the exact courses parents were searching for.",
-    strategyIntro:
-      "We built durable organic demand around high-intent course searches.",
-    strategyPoints: [
-      "Built topic-cluster content around high-intent course keywords",
-      "Fixed technical SEO and site structure",
-      "Created parent-focused guides and comparison pages",
-      "Earned local links and reviews to build authority",
-    ],
-    metrics: [
-      { value: 3, suffix: "×", label: "Organic Enrollments" },
-      { value: 4.5, decimals: 1, suffix: "×", label: "Organic Traffic" },
-      { value: 70, suffix: "+", label: "Keywords on Page 1" },
-      { value: 41, suffix: "%", label: "Lower Cost per Enrollment" },
-    ],
-    gallery: ["Topic clusters", "Parent guides", "Rankings growth"],
+    cover: "/images/portfolio/sizzle-grill-cover.jpeg",
+    gallery: ["Application portal", "Mentor dashboard", "Cohort tracking"],
   },
 ];
 

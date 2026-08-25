@@ -7,7 +7,7 @@ import remarkGfm from "remark-gfm";
 import { JsonLd } from "@/components/JsonLd";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { BlogCard } from "@/components/blog/BlogCard";
 import { ShareButtons } from "@/components/blog/ShareButtons";
 import { mdxComponents } from "@/components/blog/mdx-components";
@@ -161,7 +161,7 @@ export default async function BlogPostPage({
 
             {/* Cover placeholder */}
             <div className="relative mt-10 flex aspect-[16/7] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-              <LMark aria-hidden className="absolute right-5 top-5 h-10 w-10 opacity-80" />
+              <LogoMark className="pointer-events-none absolute right-5 top-5 h-7 w-7 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
               <span className="line-clamp-3 px-8 text-center font-heading text-2xl font-bold text-white/25">
                 {meta.title}
               </span>

@@ -1,11 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { featuredCaseStudies } from "@/content/home";
+import { getCaseStudy } from "@/content/case-studies";
 
 export function FeaturedCaseStudies() {
   return (
@@ -31,16 +33,21 @@ export function FeaturedCaseStudies() {
           {featuredCaseStudies.map((study) => (
             <Card key={study.slug} hoverable className="group overflow-hidden">
               <Link href={`/portfolio/${study.slug}`} className="block">
-                {/* Placeholder visual — no real case-study imagery yet */}
-                <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-                  <LMark
-                    aria-hidden
-                    className="absolute right-3 top-3 h-6 w-6 opacity-80"
+                {/* Cover image — STOCK/PLACEHOLDER asset, not real client work. Replace before launch. */}
+                <div className="relative aspect-[4/3] overflow-hidden bg-brand-navy">
+                  <Image
+                    src={getCaseStudy(study.slug)?.cover ?? ""}
+                    alt={`${study.client} — ${study.result}`}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <span className="font-heading text-4xl font-bold text-white/25">
-                    {study.client}
-                  </span>
-                  <span className="absolute bottom-3 left-3">
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 to-transparent"
+                  />
+                  <LogoMark className="pointer-events-none absolute right-3 top-3 z-10 h-6 w-6 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
+                  <span className="absolute bottom-3 left-3 z-10">
                     <Badge variant="solid" clipped>
                       {study.industry}
                     </Badge>

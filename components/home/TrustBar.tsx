@@ -1,8 +1,12 @@
+import Image from "next/image";
+
 import { trustBar } from "@/content/home";
 
 /**
- * Trust bar — placeholder client wordmarks until real logos are supplied.
- * TODO: swap the text wordmarks for real client logo images (next/image).
+ * Trust bar — real client logos rendered as a grayscale strip that lifts to
+ * full color on hover. Logo files live in /public/clients (see content/home.ts
+ * → trustBar.logos); swap for cleaned/vectorized artwork when the client
+ * supplies final assets.
  */
 export function TrustBar() {
   return (
@@ -11,13 +15,16 @@ export function TrustBar() {
         <p className="text-center font-heading text-xs font-medium uppercase tracking-[0.05em] text-brand-text-secondary">
           {trustBar.title}
         </p>
-        <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          {trustBar.logos.map((name) => (
-            <li
-              key={name}
-              className="font-heading text-lg font-bold tracking-tight text-brand-navy/45 transition-colors hover:text-brand-navy"
-            >
-              {name}
+        <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+          {trustBar.logos.map((logo) => (
+            <li key={logo.name}>
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain opacity-70 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0 md:h-12"
+              />
             </li>
           ))}
         </ul>

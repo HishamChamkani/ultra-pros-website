@@ -26,6 +26,7 @@ export function StatsBand({ stats, tone = "navy", className }: StatsBandProps) {
               value={stat.value}
               prefix={stat.prefix}
               suffix={stat.suffix}
+              text={stat.text}
               decimals={stat.decimals}
               label={stat.label}
             />

@@ -11,7 +11,7 @@ import { services } from "@/content/services";
 export const metadata = buildMetadata({
   title: "Services",
   description:
-    "Full-funnel digital marketing services from Ultra Pros — social media, paid/performance marketing, SEO, web development, branding & design, and content creation.",
+    "Full-service digital solutions from Ultra Pros — social media marketing, e-commerce, branding & designing, video editing, web & app development, and software development & AI automations.",
   path: "/services",
 });
 

@@ -25,7 +25,7 @@ const inter = Inter({
 
 const SITE_URL = "https://ultra-pros.com";
 const SITE_DESCRIPTION =
-  "Ultra Pros is a performance-driven digital marketing agency. We turn traffic into revenue with SEO, paid media, social, web development, branding, and content.";
+  "Ultra Pros is a digital agency turning local ideas into global realities — social media marketing, performance marketing, branding & design, web & app, and software & AI development.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,12 +36,11 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     "digital marketing agency",
-    "SEO",
-    "paid marketing",
-    "performance marketing",
     "social media marketing",
-    "web development",
-    "branding",
+    "performance marketing",
+    "branding and design",
+    "web and app development",
+    "software and AI development",
     "Ultra Pros",
   ],
   openGraph: {
@@ -56,9 +55,9 @@ export const metadata: Metadata = {
     title: "Ultra Pros | Digital Marketing Agency",
     description: SITE_DESCRIPTION,
   },
-  // Placeholder favicon (Next default). Replace with the yellow angular mark —
-  // see public/logo/README.md and BRAND_GUIDELINES §2.
-  icons: { icon: "/favicon.ico" },
+  // App icons come from the file conventions app/icon.png (512) +
+  // app/apple-icon.png (180), built from the brand mark. public/favicon.ico
+  // (multi-res 16/32/48) is the legacy fallback served at /favicon.ico.
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

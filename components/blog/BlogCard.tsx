@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import type { PostMeta } from "@/lib/blog";
 
 export function BlogCard({ post }: { post: PostMeta }) {
@@ -11,7 +11,7 @@ export function BlogCard({ post }: { post: PostMeta }) {
       <Link href={`/blog/${post.slug}`} className="flex h-full flex-col">
         {/* Cover placeholder — no post imagery yet */}
         <div className="relative flex aspect-[16/9] items-center justify-center overflow-hidden bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-          <LMark aria-hidden className="absolute right-3 top-3 h-6 w-6 opacity-80" />
+          <LogoMark className="pointer-events-none absolute right-3 top-3 h-6 w-6 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
           <span className="line-clamp-3 px-6 text-center font-heading text-lg font-semibold text-white/30">
             {post.title}
           </span>

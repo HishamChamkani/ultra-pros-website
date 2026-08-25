@@ -23,6 +23,8 @@ export interface StatCounterProps {
   prefix?: string;
   /** e.g. "+", "%", "M", "K+". */
   suffix?: string;
+  /** Static text override — renders verbatim instead of the animated count-up. */
+  text?: string;
   label: string;
   /** Animation duration in seconds. */
   duration?: number;
@@ -41,6 +43,7 @@ export function StatCounter({
   value,
   prefix = "",
   suffix = "",
+  text,
   label,
   duration = 2,
   decimals = 0,
@@ -80,9 +83,13 @@ export function StatCounter({
           tone === "dark" ? "text-brand-yellow" : "text-brand-navy",
         )}
       >
-        {prefix}
-        {display}
-        {suffix}
+        {text ?? (
+          <>
+            {prefix}
+            {display}
+            {suffix}
+          </>
+        )}
       </div>
       <div
         className={cn(

@@ -40,8 +40,10 @@ export type SocialLink = {
 export const siteConfig = {
   name: "Ultra Pros",
   tagline: "Digital Marketing Agency",
+  // Brand slogan — used as the footer description line and default meta description.
+  slogan: "Turning Local Ideas Into Global Realities",
   description:
-    "Ultra Pros is a performance-driven digital marketing agency. We turn traffic into revenue with SEO, paid media, social, web development, branding, and content.",
+    "Ultra Pros is a digital agency turning local ideas into global realities — social media marketing, performance marketing, branding & design, web & app, and software & AI development.",
   url: "https://ultra-pros.com",
 
   contact: {
@@ -87,6 +89,17 @@ export const siteConfig = {
     },
   ] satisfies SocialLink[],
 } as const;
+
+/** Industries Ultra Pros serves — shown on the About page section and the
+ *  homepage strip (near the trust bar). Rendered as badge tags. */
+export const industriesServed = [
+  "Electronics",
+  "Arts & Crafts",
+  "Medical Equipment & Supplies",
+  "Beauty & Personal Care",
+  "Healthcare & Pharmaceutical",
+  "Information Technology",
+] as const;
 
 /** Primary CTA reused across nav, hero, and footer. */
 export const bookConsultationHref = "/contact";

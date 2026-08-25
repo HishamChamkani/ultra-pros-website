@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CalendlyEmbed } from "@/components/contact/CalendlyEmbed";
 import { buildMetadata } from "@/lib/seo";
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
               {/* Google Map placeholder — TODO: embed the real map for the office location */}
               <div className="relative mt-6 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-md border border-brand-border bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-                <LMark aria-hidden className="absolute right-3 top-3 h-6 w-6 opacity-80" />
+                <LogoMark className="pointer-events-none absolute right-3 top-3 h-6 w-6 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
                 <div className="text-center">
                   <MapPin className="mx-auto h-6 w-6 text-white/70" aria-hidden />
                   <p className="mt-1 text-sm text-white/70">Map embed goes here</p>

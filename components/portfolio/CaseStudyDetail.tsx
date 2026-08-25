@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StatCounter } from "@/components/ui/stat-counter";
-import { LMark } from "@/components/ui/angled-divider";
+import { LogoMark } from "@/components/icons/LogoMark";
 import { CtaBanner } from "@/components/layout/CtaBanner";
 import type { CaseStudy } from "@/content/case-studies";
 
@@ -56,12 +57,17 @@ export function CaseStudyDetail({ caseStudy }: { caseStudy: CaseStudy }) {
             {caseStudy.summary}
           </p>
 
-          {/* Hero image placeholder */}
-          <div className="relative mt-10 flex aspect-[16/7] items-center justify-center overflow-hidden rounded-lg bg-brand-navy-tint">
-            <LMark aria-hidden className="absolute right-5 top-5 h-10 w-10 opacity-80" />
-            <span className="font-heading text-5xl font-bold text-white/20">
-              {caseStudy.client}
-            </span>
+          {/* Cover image — STOCK/PLACEHOLDER asset, not real client work. Replace before launch. */}
+          <div className="relative mt-10 aspect-[16/7] overflow-hidden rounded-lg bg-brand-navy-tint">
+            <LogoMark className="pointer-events-none absolute right-4 top-4 z-10 h-7 w-7 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
+            <Image
+              src={caseStudy.cover}
+              alt={`${caseStudy.client} case study`}
+              fill
+              sizes="(min-width: 1024px) 960px, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -132,7 +138,7 @@ export function CaseStudyDetail({ caseStudy }: { caseStudy: CaseStudy }) {
                 key={label}
                 className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-md border border-brand-border bg-gradient-to-br from-brand-navy to-brand-navy-tint"
               >
-                <LMark aria-hidden className="absolute right-3 top-3 h-5 w-5 opacity-70" />
+                <LogoMark className="pointer-events-none absolute right-3 top-3 h-5 w-5 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
                 <span className="px-4 text-center font-heading text-lg font-semibold text-white/70">
                   {label}
                 </span>

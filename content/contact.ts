@@ -6,11 +6,11 @@ import { z } from "zod";
 
 export const serviceOptions = [
   "Social Media Marketing",
-  "Paid / Performance Marketing",
-  "SEO",
-  "Web Development",
-  "Branding & Design",
-  "Content Creation",
+  "E-commerce Solutions",
+  "Branding & Designing",
+  "Video Editing",
+  "Web & App Development",
+  "Software Development & AI Automations",
   "Not sure yet",
 ] as const;
 
