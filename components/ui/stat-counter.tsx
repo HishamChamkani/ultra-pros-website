@@ -91,14 +91,16 @@ export function StatCounter({
           </>
         )}
       </div>
-      <div
-        className={cn(
-          "mt-2 text-sm font-medium uppercase tracking-[0.05em]",
-          tone === "dark" ? "text-white/70" : "text-brand-text-secondary",
-        )}
-      >
-        {label}
-      </div>
+      {label ? (
+        <div
+          className={cn(
+            "mt-2 text-sm font-medium uppercase tracking-[0.05em]",
+            tone === "dark" ? "text-white/70" : "text-brand-text-secondary",
+          )}
+        >
+          {label}
+        </div>
+      ) : null}
     </div>
   );
 }

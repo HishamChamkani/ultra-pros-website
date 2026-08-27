@@ -43,7 +43,7 @@ colors: {
   },
 },
 fontFamily: {
-  heading: ["Space Grotesk", "sans-serif"],
+  heading: ["Poppins", "sans-serif"],
   body: ["Inter", "sans-serif"],
 },
 borderRadius: {

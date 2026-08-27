@@ -57,9 +57,9 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <Hero />
       <TrustBar />
-      <IndustriesStrip />
       <StatsBand stats={stats} />
       <ServicesOverview />
+      <IndustriesStrip />
       <FeaturedCaseStudies />
       <WhyUltraPros />
       <Testimonials />

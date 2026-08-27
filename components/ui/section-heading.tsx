@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * SectionHeading (BRAND_GUIDELINES §4 type scale).
- * Eyebrow label (with an angular yellow accent, so the accent is a shape not
- * yellow text on white — keeps AA contrast) + H2 + optional subtext.
+ * Montserrat uppercase eyebrow label + H2 + optional subtext.
  */
 export interface SectionHeadingProps
   extends Omit<React.HTMLAttributes<HTMLDivElement>, "title"> {
@@ -42,14 +41,10 @@ export function SectionHeading({
       {eyebrow ? (
         <span
           className={cn(
-            "mb-4 inline-flex items-center gap-2 font-heading text-xs font-medium uppercase tracking-[0.05em]",
+            "mb-4 inline-block font-montserrat text-sm font-medium uppercase tracking-[0.05em]",
             isDark ? "text-white" : "text-brand-navy",
           )}
         >
-          <span
-            className="h-3 w-3 shrink-0 bg-brand-yellow corner-clip"
-            aria-hidden
-          />
           {eyebrow}
         </span>
       ) : null}

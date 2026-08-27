@@ -43,7 +43,9 @@ export type Stat = {
 };
 
 export const stats: Stat[] = [
-  { value: 2025, text: "Since 2025", label: "Established" },
+  // `text: "2024"` renders the year verbatim (no count-up comma, e.g. "2,024");
+  // label shows as the small gray uppercase caption like the other stats.
+  { value: 2024, text: "2024", label: "Established" },
   { value: 100, suffix: "+", label: "Projects Delivered" },
   { value: 80, suffix: "+", label: "Clients Served" },
   { value: 70, prefix: "$", suffix: "M+", label: "Client Revenue Generated" },

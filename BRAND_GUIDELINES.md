@@ -50,9 +50,10 @@ Locked from `Colors.png` — do not introduce new hues outside tints/shades of t
 
 Match the logo's blocky, geometric, confident character:
 
-- **Headings:** `Space Grotesk` (weights 500/600/700) — geometric, bold, techy, mirrors the angular logo mark. Alternative if unavailable: `Sora`.
+- **Headings:** `Poppins` (weights 500/600/700) — geometric, rounded, confident; drives the `--font-heading` token used by h1–h6 and all heading-font components.
 - **Body / UI text:** `Inter` (weights 400/500/600) — highly legible, neutral workhorse for paragraphs, forms, nav.
-- **Numerals / Stats (e.g. "200+ Clients"):** Space Grotesk Bold, often paired with Mikado Yellow.
+- **CTA buttons & section eyebrow labels:** `Montserrat` (weights 500/600/700) — used for CTA button labels (e.g. "Book a Consultation", "View Our Work") and the uppercase section eyebrows (TRUSTED BY, WHAT WE DO, WHY ULTRA PROS, …). Exposed as the `--font-montserrat` CSS variable / `font-montserrat` utility.
+- **Numerals / Stats (e.g. "200+ Clients"):** Poppins Bold, often paired with Mikado Yellow.
 
 **Type scale (desktop / mobile):**
 | Level | Size (desktop) | Size (mobile) | Weight |

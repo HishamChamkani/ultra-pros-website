@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Poppins, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatLauncher } from "@/components/layout/ChatLauncher";
 import { ConsultationModalProvider } from "@/components/consultation/ConsultationModalProvider";
 
-// Headings — geometric/blocky, mirrors the angular logo mark (BRAND_GUIDELINES §4)
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+// Headings — Poppins (BRAND_GUIDELINES §4). Drives the --font-heading token.
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   display: "swap",
@@ -20,6 +20,14 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+// CTA buttons + section eyebrow labels (BRAND_GUIDELINES §4)
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
   display: "swap",
 });
 
@@ -64,7 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} h-full`}
+      className={`${poppins.variable} ${inter.variable} ${montserrat.variable} h-full`}
     >
       <body className="flex min-h-full flex-col bg-background font-body text-foreground antialiased">
         <ConsultationModalProvider>

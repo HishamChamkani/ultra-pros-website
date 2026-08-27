@@ -1,56 +1,49 @@
-import {
-  Cpu,
-  Palette,
-  Stethoscope,
-  Sparkles,
-  Pill,
-  Code,
-  type LucideIcon,
-} from "lucide-react";
+import Image from "next/image";
 
 import { industriesServed } from "@/content/site";
 
 /**
- * Lightweight "Industries we serve" strip for the homepage, sitting just below
- * the trust bar. Labels are the shared list (content/site.ts); the icon map
- * below pairs each with the closest lucide glyph (Mikado Yellow accent per
- * BRAND_GUIDELINES §3).
+ * "Industries we serve" strip — a full-width white band that appears directly
+ * below the "What We Do" section (also white), with a 1px top border for a
+ * subtle separation instead of a background-color break. Labels are the shared
+ * list (content/site.ts); each maps to a real PNG in /public/industries
+ * (filenames verified against the directory, incl. spaces and ampersands —
+ * encoded at render time).
  */
-const industryIcons: Record<(typeof industriesServed)[number], LucideIcon> = {
-  Electronics: Cpu,
-  "Arts & Crafts": Palette,
-  "Medical Equipment & Supplies": Stethoscope,
-  "Beauty & Personal Care": Sparkles,
-  "Healthcare & Pharmaceutical": Pill,
-  "Information Technology": Code,
+const industryImages: Record<(typeof industriesServed)[number], string> = {
+  Electronics: "Electronics.png",
+  "Arts & Crafts": "Arts and Crafts.png",
+  "Medical Equipment & Supplies": "Medical Equipment & Supplies.png",
+  "Beauty & Personal Care": "Beauty & Personal Care.png",
+  "Healthcare & Pharmaceutical": "Healthcare.png",
+  "Information Technology": "Information Technology.png",
 };
 
 export function IndustriesStrip() {
   return (
-    <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <p className="text-center font-heading text-xs font-medium uppercase tracking-[0.05em] text-brand-text-secondary">
+    <section className="border-t border-brand-border bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <p className="text-center font-montserrat text-sm font-medium uppercase tracking-[0.05em] text-brand-text-secondary">
           Industries we serve
         </p>
-        <ul className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-          {industriesServed.map((industry) => {
-            const Icon = industryIcons[industry];
-            return (
-              <li
-                key={industry}
-                className="flex flex-col items-center gap-2 text-center"
-              >
-                <Icon
-                  className="h-8 w-8 text-brand-yellow"
-                  strokeWidth={2}
-                  aria-hidden
-                />
-                <span className="text-xs font-medium text-brand-navy sm:text-sm">
-                  {industry}
-                </span>
-              </li>
-            );
-          })}
+        <ul className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-6">
+          {industriesServed.map((industry) => (
+            <li
+              key={industry}
+              className="flex flex-col items-center gap-4 text-center"
+            >
+              <Image
+                src={`/industries/${encodeURIComponent(industryImages[industry])}`}
+                alt={industry}
+                width={80}
+                height={80}
+                className="h-14 w-14 object-contain"
+              />
+              <span className="text-sm font-medium text-brand-navy">
+                {industry}
+              </span>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
