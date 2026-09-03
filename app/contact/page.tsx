@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 
 import { SectionHeading } from "@/components/ui/section-heading";
-import { LogoMark } from "@/components/icons/LogoMark";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CalendlyEmbed } from "@/components/contact/CalendlyEmbed";
 import { buildMetadata } from "@/lib/seo";
@@ -87,13 +86,26 @@ export default function ContactPage() {
                 </li>
               </ul>
 
-              {/* Google Map placeholder — TODO: embed the real map for the office location */}
-              <div className="relative mt-6 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-md border border-brand-border bg-gradient-to-br from-brand-navy to-brand-navy-tint">
-                <LogoMark className="pointer-events-none absolute right-3 top-3 h-6 w-6 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
-                <div className="text-center">
-                  <MapPin className="mx-auto h-6 w-6 text-white/70" aria-hidden />
-                  <p className="mt-1 text-sm text-white/70">Map embed goes here</p>
+              {/* Google Map embed for the office location (keyless iframe). */}
+              <div className="mt-6">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-brand-border">
+                  <iframe
+                    title="Ultra Pros office location map"
+                    src="https://www.google.com/maps?q=AKTI+Peshawar+Arfa+Tower+University+Road+Tehkal+Bala+Peshawar&output=embed"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0 h-full w-full border-0"
+                  />
                 </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=AKTI+Peshawar+Arfa+Tower+University+Road+Tehkal+Bala+Peshawar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1.5 font-heading text-sm font-semibold text-brand-navy transition-colors hover:text-brand-yellow-hover"
+                >
+                  <MapPin className="h-4 w-4" aria-hidden />
+                  Get directions
+                </a>
               </div>
 
               {/* Socials */}
