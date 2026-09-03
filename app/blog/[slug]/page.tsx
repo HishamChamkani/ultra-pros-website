@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { compileMDX } from "next-mdx-remote/rsc";
@@ -159,12 +160,24 @@ export default async function BlogPostPage({
               </div>
             </div>
 
-            {/* Cover placeholder */}
+            {/* Cover image; falls back to a title placeholder when a post has
+                no coverImage yet. */}
             <div className="relative mt-10 flex aspect-[16/7] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-brand-navy to-brand-navy-tint">
+              {meta.coverImage ? (
+                <Image
+                  src={meta.coverImage}
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 768px) 768px, 100vw"
+                  className="object-cover"
+                />
+              ) : (
+                <span className="line-clamp-3 px-8 text-center font-heading text-2xl font-bold text-white/25">
+                  {meta.title}
+                </span>
+              )}
               <LogoMark className="pointer-events-none absolute right-5 top-5 h-7 w-7 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
-              <span className="line-clamp-3 px-8 text-center font-heading text-2xl font-bold text-white/25">
-                {meta.title}
-              </span>
             </div>
           </div>
         </header>

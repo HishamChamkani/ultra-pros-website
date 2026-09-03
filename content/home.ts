@@ -151,44 +151,37 @@ export type Testimonial = {
   name: string;
   role: string;
   company: string;
-  /** Client logo shown beside the attribution (files in /public/clients). */
-  logo?: string;
 };
 
-// Real client company names; quotes and people are PLACEHOLDER until real
-// client-approved testimonials are provided before launch.
+// Client-provided attributions (name/role/company). Quotes are client-approved.
 export const testimonials: Testimonial[] = [
   {
     quote:
       "Ultra Pros took us online and actually explained how. We finally have a partner we trust.",
-    name: "Sarah Malik",
-    role: "Head of Growth",
+    name: "Raaz Muhammad",
+    role: "GM",
     company: "HAQ Electronics",
-    logo: "/clients/haq-electronics-logo.png",
   },
   {
     quote:
       "They shipped our product and our brand in six weeks. No fluff, just results.",
-    name: "David Chen",
-    role: "Founder",
-    company: "UltraSecure",
-    logo: "/clients/ultra-secure-logo.png",
+    name: "Dr. Rizwan Malik",
+    role: "MD",
+    company: "BioGlobal",
   },
   {
     quote:
       "The team moves fast and treats our budget like their own. Best decision we've made in years.",
-    name: "Ayesha Khan",
-    role: "Marketing Director",
-    company: "BioGlobal",
-    logo: "/clients/bio-global-logo.png",
+    name: "Ayesha",
+    role: "Founder",
+    company: "Doxa Fabric Paints",
   },
   {
     quote:
       "Clear reporting, real strategy, and a crew that actually picks up the phone. Ultra Pros delivers.",
-    name: "Marco Reyes",
-    role: "Program Director",
-    company: "Arfa Karim Technology Incubator",
-    logo: "/clients/arfa-karim-logo.png",
+    name: "Wajeeha",
+    role: "Founder",
+    company: "Joya Lumière",
   },
 ];
 
