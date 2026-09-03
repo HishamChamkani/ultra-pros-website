@@ -12,7 +12,7 @@ import { aboutStats } from "@/content/about";
 export const metadata = buildMetadata({
   title: "About Us",
   description:
-    "Meet Ultra Pros — a performance-driven digital marketing agency since 2018. Our mission, values, team, and the numbers behind our work.",
+    "Meet Ultra Pros, a performance-driven digital marketing agency since 2018. Our mission, values, team, and the numbers behind our work.",
   path: "/about",
 });
 

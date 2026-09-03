@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Portfolio",
   description:
-    "Real results from Ultra Pros — case studies across e-commerce, healthcare, real estate, SaaS, retail, restaurant, fitness, and education. Filter by industry and service.",
+    "Real results from Ultra Pros, case studies across e-commerce, healthcare, real estate, SaaS, retail, restaurant, fitness, and education. Filter by industry and service.",
   path: "/portfolio",
 });
 

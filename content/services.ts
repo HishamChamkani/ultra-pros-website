@@ -46,7 +46,7 @@ export const services: Service[] = [
     blurb: "Grow and engage your audience across every platform.",
     href: "/services/social-media-marketing",
     heroCopy:
-      "Social isn't a megaphone — it's where your next customers decide whether to trust you. We build platform-native content and community strategies that turn followers into pipeline, not just a vanity number.",
+      "Social isn't a megaphone, it's where your next customers decide whether to trust you. We build platform-native content and community strategies that turn followers into pipeline, not just a vanity number.",
     whatsIncluded: [
       "Channel strategy across Instagram, TikTok, LinkedIn, Facebook, and X",
       "Monthly content calendars mapped to campaigns and launches",
@@ -97,7 +97,7 @@ export const services: Service[] = [
     blurb: "Online stores built to convert browsers into buyers.",
     href: "/services/ecommerce-solutions",
     heroCopy:
-      "A great product deserves a store that actually sells it. We design, build, and optimize e-commerce experiences — from storefront to checkout to retention — that turn traffic into orders and first-time buyers into repeat customers.",
+      "A great product deserves a store that actually sells it. We design, build, and optimize e-commerce experiences, from storefront to checkout to retention, that turn traffic into orders and first-time buyers into repeat customers.",
     whatsIncluded: [
       "Storefront design and build (Shopify, WooCommerce, custom)",
       "Product page, cart, and checkout conversion optimization",
@@ -148,7 +148,7 @@ export const services: Service[] = [
     blurb: "Sharp, memorable identities that stand out.",
     href: "/services/branding-designing",
     heroCopy:
-      "In a crowded feed, forgettable is fatal. We craft bold, cohesive brand identities and design systems that make you instantly recognizable — and impossible to ignore.",
+      "In a crowded feed, forgettable is fatal. We craft bold, cohesive brand identities and design systems that make you instantly recognizable, and impossible to ignore.",
     whatsIncluded: [
       "Logo, wordmark, and visual identity systems",
       "Brand guidelines and messaging frameworks",
@@ -171,7 +171,7 @@ export const services: Service[] = [
       {
         title: "Design",
         description:
-          "We craft the identity system — logo, color, type, and templates.",
+          "We craft the identity system, from logo and color to type and templates.",
       },
       {
         title: "Deliver",
@@ -194,7 +194,7 @@ export const services: Service[] = [
     blurb: "Scroll-stopping video that holds attention and sells.",
     href: "/services/video-editing",
     heroCopy:
-      "Video is the format every platform rewards — if it's cut right. We turn raw footage into scroll-stopping short-form, polished brand films, and product videos edited for the platform, the audience, and the action you want.",
+      "Video is the format every platform rewards, if it's cut right. We turn raw footage into scroll-stopping short-form, polished brand films, and product videos edited for the platform, the audience, and the action you want.",
     whatsIncluded: [
       "Short-form editing for Reels, TikTok, and Shorts",
       "Long-form brand films, explainers, and product videos",
@@ -212,7 +212,7 @@ export const services: Service[] = [
       {
         title: "Assemble",
         description:
-          "We cut the core edit — pacing, structure, and hook — for a first review.",
+          "We cut the core edit, pacing, structure, and hook, for a first review.",
       },
       {
         title: "Polish",
@@ -240,7 +240,7 @@ export const services: Service[] = [
     blurb: "Fast, conversion-focused websites and apps that perform.",
     href: "/services/web-app-development",
     heroCopy:
-      "Your website and app are your hardest-working salespeople. We design and build fast, SEO-ready websites and mobile/web apps that load in a blink and turn visitors into customers — not just pretty screens that sit there.",
+      "Your website and app are your hardest-working salespeople. We design and build fast, SEO-ready websites and mobile/web apps that load in a blink and turn visitors into customers, not just pretty screens that sit there.",
     whatsIncluded: [
       "Custom web design and development (Next.js, WordPress, Shopify)",
       "Cross-platform mobile and web app development",
@@ -292,7 +292,7 @@ export const services: Service[] = [
     blurb: "Custom software and AI automations that scale your business.",
     href: "/services/software-ai-automations",
     heroCopy:
-      "Off-the-shelf tools only get you so far. We design and build custom software, internal tools, and AI automations — chatbots, workflow bots, and integrations — that cut manual work and unlock what your business couldn't do before.",
+      "Off-the-shelf tools only get you so far. We design and build custom software, internal tools, and AI automations, chatbots, workflow bots, and integrations, that cut manual work and unlock what your business couldn't do before.",
     whatsIncluded: [
       "Custom web and SaaS application development",
       "AI automations: chatbots, assistants, and workflow bots",

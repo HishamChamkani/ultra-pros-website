@@ -16,6 +16,7 @@ import {
   siteConfig,
   type SocialKey,
 } from "@/content/site";
+import { NewsletterForm } from "@/components/layout/NewsletterForm";
 
 const socialIcons: Record<SocialKey, LucideIcon> = {
   facebook: Facebook,
@@ -131,30 +132,8 @@ export function Footer() {
               </li>
             </ul>
 
-            {/* Newsletter — non-functional placeholder (TODO: wire up in a later phase) */}
-            <form className="mt-6" aria-label="Newsletter signup">
-              <label
-                htmlFor="newsletter-email"
-                className="block text-sm font-medium text-white"
-              >
-                Get marketing tips in your inbox
-              </label>
-              <div className="mt-2 flex gap-2">
-                <input
-                  id="newsletter-email"
-                  type="email"
-                  placeholder="you@company.com"
-                  className="h-11 w-full min-w-0 rounded-md border border-white/15 bg-brand-navy-tint px-3 text-sm text-white placeholder:text-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow"
-                />
-                {/* TODO: this button is a placeholder — no submission wired yet. */}
-                <button
-                  type="button"
-                  className="inline-flex h-11 shrink-0 items-center justify-center rounded-md bg-brand-yellow px-4 font-heading text-sm font-semibold text-brand-navy transition-colors hover:bg-brand-yellow-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            {/* Newsletter signup, posts to /api/newsletter (Resend Audience). */}
+            <NewsletterForm />
           </div>
         </div>
       </div>

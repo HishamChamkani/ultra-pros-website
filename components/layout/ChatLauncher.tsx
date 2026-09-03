@@ -45,7 +45,7 @@ export function ChatLauncher() {
           <div className="bg-brand-navy px-4 py-4 text-white">
             <p className="font-heading text-base font-semibold">How can we help?</p>
             <p className="mt-0.5 text-xs text-white/60">
-              Chat with us — we usually reply right away.
+              Chat with us, we usually reply right away.
             </p>
           </div>
           <div className="p-3">

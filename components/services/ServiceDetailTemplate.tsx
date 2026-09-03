@@ -80,7 +80,7 @@ export function ServiceDetailTemplate({ service }: { service: Service }) {
           <SectionHeading
             eyebrow="What's included"
             title="Everything you get"
-            subtitle="A dedicated team and a clear scope — no vague retainers or surprise line items."
+            subtitle="A dedicated team and a clear scope, no vague retainers or surprise line items."
             className="mb-10"
           />
           <ul className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -102,7 +102,7 @@ export function ServiceDetailTemplate({ service }: { service: Service }) {
           <SectionHeading
             eyebrow="How we work"
             title="Our process"
-            subtitle="A proven, transparent workflow — you always know what's happening and what's next."
+            subtitle="A proven, transparent workflow, you always know what's happening and what's next."
             className="mb-12"
           />
           <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

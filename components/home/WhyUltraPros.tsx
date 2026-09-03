@@ -29,7 +29,7 @@ export function WhyUltraPros() {
           align="center"
           eyebrow="Why Ultra Pros"
           title="Fast, confident, results-obsessed"
-          subtitle="No fluff — just a team built to make your marketing work harder."
+          subtitle="No fluff, just a team built to make your marketing work harder."
           className="mx-auto mb-12"
         />
 

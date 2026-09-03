@@ -11,7 +11,7 @@ import { services } from "@/content/services";
 export const metadata = buildMetadata({
   title: "Services",
   description:
-    "Full-service digital solutions from Ultra Pros — social media marketing, e-commerce, branding & designing, video editing, web & app development, and software development & AI automations.",
+    "Full-service digital solutions from Ultra Pros, social media marketing, e-commerce, branding & designing, video editing, web & app development, and software development & AI automations.",
   path: "/services",
 });
 
@@ -25,7 +25,7 @@ export default function ServicesPage() {
             align="center"
             eyebrow="Our Services"
             title="Marketing services that drive growth"
-            subtitle="Six disciplines, one team, one goal — measurable results for your business. Explore how each service turns effort into revenue."
+            subtitle="Six disciplines, one team, one goal, measurable results for your business. Explore how each service turns effort into revenue."
             className="mx-auto mb-12"
           />
 
@@ -61,7 +61,7 @@ export default function ServicesPage() {
 
       <CtaBanner
         title="Not sure where to start?"
-        subtitle="Tell us your goals and we'll recommend the right mix — no pressure, no jargon."
+        subtitle="Tell us your goals and we'll recommend the right mix, no pressure, no jargon."
         cta={{ label: "Book a Consultation", href: "/contact" }}
         tone="yellow"
       />

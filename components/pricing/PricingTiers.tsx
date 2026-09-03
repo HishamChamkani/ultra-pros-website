@@ -41,8 +41,8 @@ export function PricingTiers() {
                 ${tier.priceUSD.toLocaleString("en-US")}
               </span>
               <span className="text-brand-text-secondary"> / mo</span>
-              <p className="mt-1 text-sm text-brand-text-secondary">
-                approx. PKR {tier.pricePKR.toLocaleString("en-US")} / mo
+              <p className="mt-1 text-sm text-brand-text-secondary/80">
+                ≈ PKR {tier.pricePKR.toLocaleString("en-US")}/mo
               </p>
             </div>
 

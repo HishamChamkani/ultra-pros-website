@@ -73,7 +73,7 @@ export function ComparisonTable() {
       </table>
       <p className="mt-4 text-xs text-brand-text-secondary">
         *Unlimited content is subject to a fair-use policy. Pricing shown is
-        indicative — final scope and rates are confirmed during your consultation.
+        indicative, final scope and rates are confirmed during your consultation.
       </p>
     </div>
   );

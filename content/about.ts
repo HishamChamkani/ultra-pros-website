@@ -8,15 +8,15 @@ export const aboutHero = {
   eyebrow: "About Ultra Pros",
   title: "We're the growth partner brands actually keep.",
   paragraph:
-    "Our mission is simple: turn marketing from a cost center into your most reliable growth engine. No vanity metrics, no jargon — just strategy, speed, and numbers you can trust.",
+    "Our mission is simple: turn marketing from a cost center into your most reliable growth engine. No vanity metrics, no jargon, just strategy, speed, and numbers you can trust.",
 } as const;
 
 export const story = {
-  eyebrow: "Since 2018",
-  title: "Built to move fast — and make it count",
+  eyebrow: "Since 2024",
+  title: "Built to move fast, and make it count",
   paragraphs: [
-    "Ultra Pros started in 2018 with a simple frustration: too many agencies sold activity instead of outcomes. Reports full of impressions, light on revenue. We set out to be the opposite.",
-    "Since then we've grown into a full-funnel team — paid, SEO, social, web, and creative under one roof — helping 200+ brands turn traffic into real business results. We ship fast, iterate weekly, and treat every budget like it's our own.",
+    "Ultra Pros started in 2024 with a simple frustration: too many agencies sold activity instead of outcomes. Reports full of impressions, light on revenue. We set out to be the opposite.",
+    "Since then we've built a full-funnel team, paid, SEO, social, web, and creative under one roof, helping 80+ clients turn traffic into real business results. We ship fast, iterate weekly, and treat every budget like it's our own.",
     "The market changes constantly. Our edge is refusing to stand still: we test, learn, and adapt faster than the platforms do.",
   ],
 } as const;
@@ -57,7 +57,7 @@ export const values: Value[] = [
     icon: "sparkles",
     title: "Creativity",
     description:
-      "Sharp, on-brand ideas grounded in data — creative that stops the scroll and drives the click.",
+      "Sharp, on-brand ideas grounded in data, creative that stops the scroll and drives the click.",
   },
   {
     icon: "heart-handshake",
@@ -77,7 +77,7 @@ export const aboutStats: Stat[] = [
 // TODO: CEO name/role is a placeholder — confirm real leadership details with the client.
 export const ceoQuote = {
   quote:
-    "We don't measure ourselves by awards or impressions. We measure ourselves by whether our clients grow — and whether they'd recommend us without hesitating. That's the only scoreboard that matters.",
+    "We don't measure ourselves by awards or impressions. We measure ourselves by whether our clients grow, and whether they'd recommend us without hesitating. That's the only scoreboard that matters.",
   name: "Imran Ultra",
   role: "Founder & CEO, Ultra Pros",
 } as const;

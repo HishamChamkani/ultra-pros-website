@@ -33,7 +33,7 @@ const montserrat = Montserrat({
 
 const SITE_URL = "https://ultra-pros.com";
 const SITE_DESCRIPTION =
-  "Ultra Pros is a digital agency turning local ideas into global realities — social media marketing, performance marketing, branding & design, web & app, and software & AI development.";
+  "Ultra Pros is a digital agency turning local ideas into global realities, social media marketing, performance marketing, branding & design, web & app, and software & AI development.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -80,8 +80,8 @@ export function CaseStudyDetail({
           <SectionHeading eyebrow="Case Study" title="The full story is coming soon" className="mb-6" />
           <div className="rounded-lg border border-dashed border-brand-border bg-brand-surface p-8">
             <p className="text-lg leading-relaxed text-brand-text-secondary">
-              The detailed write-up for {caseStudy.client} — the challenge, our
-              strategy, and the results — is being finalized with the client.
+              The detailed write-up for {caseStudy.client}, the challenge, our
+              strategy, and the results, is being finalized with the client.
               Check back soon, or explore the work below.
             </p>
             {/* TODO: replace with real, client-approved challenge → strategy →

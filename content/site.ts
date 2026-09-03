@@ -43,7 +43,7 @@ export const siteConfig = {
   // Brand slogan — used as the footer description line and default meta description.
   slogan: "Turning Local Ideas Into Global Realities",
   description:
-    "Ultra Pros is a digital agency turning local ideas into global realities — social media marketing, performance marketing, branding & design, web & app, and software & AI development.",
+    "Ultra Pros is a digital agency turning local ideas into global realities, social media marketing, performance marketing, branding & design, web & app, and software & AI development.",
   url: "https://ultra-pros.com",
 
   contact: {

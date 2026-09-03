@@ -10,6 +10,7 @@ export type Tier = {
   name: string;
   description: string;
   priceUSD: number;
+  /** Approximate PKR equivalent, shown as muted subtext under the USD price. */
   pricePKR: number;
   highlighted?: boolean;
   features: string[];
@@ -21,8 +22,8 @@ export const tiers: Tier[] = [
     id: "starter",
     name: "Starter",
     description: "For small businesses getting serious about growth.",
-    priceUSD: 549,
-    pricePKR: 150000,
+    priceUSD: 289,
+    pricePKR: 80000,
     features: [
       "2 marketing channels",
       "Up to 8 content pieces / month",
@@ -37,8 +38,8 @@ export const tiers: Tier[] = [
     id: "growth",
     name: "Growth",
     description: "For scaling brands that need full-funnel momentum.",
-    priceUSD: 1299,
-    pricePKR: 350000,
+    priceUSD: 541,
+    pricePKR: 150000,
     highlighted: true,
     features: [
       "4 marketing channels",
@@ -55,8 +56,8 @@ export const tiers: Tier[] = [
     id: "scale",
     name: "Scale",
     description: "For established brands that want to dominate their market.",
-    priceUSD: 2799,
-    pricePKR: 750000,
+    priceUSD: 1082,
+    pricePKR: 300000,
     features: [
       "Unlimited channels",
       "Unlimited content (fair use)",
@@ -101,17 +102,17 @@ export const pricingFaqs: Faq[] = [
   {
     question: "Is there a setup fee or a long-term contract?",
     answer:
-      "No setup fees. We work on a rolling monthly basis with a simple 30-day notice — we'd rather earn your business every month than lock you in.",
+      "No setup fees. We work on a rolling monthly basis with a simple 30-day notice, we'd rather earn your business every month than lock you in.",
   },
   {
     question: "What counts as a 'marketing channel'?",
     answer:
-      "A channel is any platform we actively manage for you — for example paid search, paid social, organic social, SEO, or email. We'll recommend the right mix for your goals during your consultation.",
+      "A channel is any platform we actively manage for you, for example paid search, paid social, organic social, SEO, or email. We'll recommend the right mix for your goals during your consultation.",
   },
   {
     question: "Can I change plans later?",
     answer:
-      "Absolutely. You can upgrade, downgrade, or adjust scope as your needs change — most clients start on Growth and scale up as results compound.",
+      "Absolutely. You can upgrade, downgrade, or adjust scope as your needs change, most clients start on Growth and scale up as results compound.",
   },
   {
     question: "Do you offer custom or one-off projects?",
@@ -126,6 +127,6 @@ export const pricingFaqs: Faq[] = [
   {
     question: "Who owns the ad accounts, creative, and data?",
     answer:
-      "You do — always. We build everything in accounts you own, and you keep full access to your creative, data, and dashboards even if we part ways.",
+      "You do, always. We build everything in accounts you own, and you keep full access to your creative, data, and dashboards even if we part ways.",
   },
 ];

@@ -14,7 +14,7 @@ export function IndustriesServed() {
           align="center"
           eyebrow="Industries we serve"
           title="Growth expertise across sectors"
-          subtitle="We've delivered results for brands in a wide range of industries — and we speak each one's language."
+          subtitle="We've delivered results for brands in a wide range of industries, and we speak each one's language."
           className="mx-auto mb-12"
         />
         <ul className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-3">

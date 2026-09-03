@@ -45,7 +45,7 @@ export function ConsultationModalProvider({
           <DialogHeader>
             <DialogTitle>Book a free consultation</DialogTitle>
             <DialogDescription>
-              Pick a time that works for you — no obligation, no pressure.
+              Pick a time that works for you, no obligation, no pressure.
             </DialogDescription>
           </DialogHeader>
           {/* Only mounts the Calendly widget when the modal is open. */}

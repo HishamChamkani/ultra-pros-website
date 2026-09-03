@@ -7,7 +7,7 @@ import { getAllPosts, getAllCategories } from "@/lib/blog";
 export const metadata = buildMetadata({
   title: "Blog",
   description:
-    "Practical digital marketing insight from the Ultra Pros team — paid media, SEO, social, and content strategy with no filler.",
+    "Practical digital marketing insight from the Ultra Pros team, paid media, SEO, social, and content strategy with no filler.",
   path: "/blog",
 });
 
@@ -23,7 +23,7 @@ export default function BlogPage() {
             as="h1"
             eyebrow="The Blog"
             title="Ideas worth your time"
-            subtitle="Practical marketing insight from the team — the stuff we'd tell a client over coffee."
+            subtitle="Practical marketing insight from the team, the stuff we'd tell a client over coffee."
             className="mb-12 max-w-2xl"
           />
           <BlogList posts={posts} categories={categories} />

@@ -37,7 +37,7 @@ function getBotResponse(input: string): BotReply {
 
   if (has("price", "pricing", "cost", "package", "plan", "budget"))
     return {
-      text: "We offer three monthly packages — Starter, Growth, and Scale — plus custom quotes. You can compare them here:",
+      text: "We offer three monthly packages, Starter, Growth, and Scale, plus custom quotes. You can compare them here:",
       link: { label: "See pricing", href: "/pricing" },
     };
 
@@ -55,7 +55,7 @@ function getBotResponse(input: string): BotReply {
 
   if (has("ecommerce", "e-commerce", "shop", "store", "sell", "order", "cart", "shopify"))
     return {
-      text: "We design and build online stores optimized to turn browsers into buyers — storefront, checkout, and retention.",
+      text: "We design and build online stores optimized to turn browsers into buyers, storefront, checkout, and retention.",
       link: { label: "E-commerce service", href: "/services/ecommerce-solutions" },
     };
 
@@ -73,7 +73,7 @@ function getBotResponse(input: string): BotReply {
 
   if (has("software", "ai", "automation", "automate", "chatbot", "saas", "integration"))
     return {
-      text: "We build custom software and AI automations — chatbots, workflow bots, and integrations — that cut manual work and scale your business.",
+      text: "We build custom software and AI automations, chatbots, workflow bots, and integrations, that cut manual work and scale your business.",
       link: { label: "Software & AI service", href: "/services/software-ai-automations" },
     };
 
@@ -93,7 +93,7 @@ function getBotResponse(input: string): BotReply {
     return { text: "We share practical marketing insight on the blog:", link: { label: "Read the blog", href: "/blog" } };
 
   if (has("about", "who are you", "team", "story"))
-    return { text: "We're Ultra Pros — a performance-driven agency since 2018. Meet the team:", link: { label: "About us", href: "/about" } };
+    return { text: "We're Ultra Pros, a performance-driven agency since 2018. Meet the team:", link: { label: "About us", href: "/about" } };
 
   if (has("book", "consultation", "consult", "meeting", "demo", "call", "talk"))
     return {
@@ -103,7 +103,7 @@ function getBotResponse(input: string): BotReply {
 
   if (has("contact", "email", "phone", "reach", "get in touch"))
     return {
-      text: "You can reach us any time via the contact page — form, email, and phone are all there:",
+      text: "You can reach us any time via the contact page, form, email, and phone are all there:",
       link: { label: "Contact us", href: "/contact" },
     };
 
@@ -111,7 +111,7 @@ function getBotResponse(input: string): BotReply {
     return { text: "You're welcome! Anything else I can point you to?" };
 
   return {
-    text: "Great question — the best way to get a specific answer is to reach the team directly. You can also message us on WhatsApp.",
+    text: "Great question, the best way to get a specific answer is to reach the team directly. You can also message us on WhatsApp.",
     link: { label: "Contact us", href: "/contact" },
   };
 }

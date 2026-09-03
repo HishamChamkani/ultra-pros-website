@@ -72,7 +72,7 @@ export function ContactForm() {
         </span>
         <div>
           <h3 className="font-heading text-xl font-bold text-brand-navy">
-            Thanks — we&rsquo;ve got it.
+            Thanks, we&rsquo;ve got it.
           </h3>
           <p className="mt-2 text-brand-text-secondary">
             A strategist will get back to you within one business day. In a hurry?

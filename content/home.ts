@@ -12,7 +12,7 @@ export const hero = {
   titleLead: "We turn traffic into",
   titleAccent: "revenue.",
   subtitle:
-    "Ultra Pros is a performance marketing agency for brands that want measurable growth — not vanity metrics. Strategy, execution, and reporting you can actually read.",
+    "Ultra Pros is a performance marketing agency for brands that want measurable growth, not vanity metrics. Strategy, execution, and reporting you can actually read.",
   primaryCta: { label: "Book a Consultation", href: "/contact" },
   secondaryCta: { label: "View Our Work", href: "/portfolio" },
 } as const;
@@ -118,7 +118,7 @@ export const whyUltraPros: ValueProp[] = [
     icon: "user-check",
     title: "A dedicated strategist",
     description:
-      "You get a senior strategist who knows your account — not a rotating cast of junior account managers.",
+      "You get a senior strategist who knows your account, not a rotating cast of junior account managers.",
   },
   {
     icon: "zap",
@@ -130,7 +130,7 @@ export const whyUltraPros: ValueProp[] = [
     icon: "layers",
     title: "Full-funnel, in-house",
     description:
-      "Social, e-commerce, branding, video, web, and software under one roof — no finger-pointing between three different agencies.",
+      "Social, e-commerce, branding, video, web, and software under one roof, no finger-pointing between three different agencies.",
   },
   {
     icon: "line-chart",
@@ -142,7 +142,7 @@ export const whyUltraPros: ValueProp[] = [
     icon: "sparkles",
     title: "Data-backed creative",
     description:
-      "Sharp, on-brand creative informed by what actually converts — not guesswork or trends for their own sake.",
+      "Sharp, on-brand creative informed by what actually converts, not guesswork or trends for their own sake.",
   },
 ];
 
@@ -188,6 +188,6 @@ export const testimonials: Testimonial[] = [
 export const finalCta = {
   title: "Ready to grow?",
   subtitle:
-    "Book a free consultation and we'll map out where your next wins are hiding — no obligation, no jargon.",
+    "Book a free consultation and we'll map out where your next wins are hiding, no obligation, no jargon.",
   cta: { label: "Book a Consultation", href: "/contact" },
 } as const;

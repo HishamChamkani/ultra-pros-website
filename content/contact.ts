@@ -40,7 +40,7 @@ export const contactSchema = z.object({
     .string()
     .trim()
     .min(10, "Please tell us a bit more (at least 10 characters)")
-    .max(2000, "That message is a little long — please trim it down"),
+    .max(2000, "That message is a little long, please trim it down"),
 });
 
 export type ContactFormValues = z.infer<typeof contactSchema>;
@@ -51,5 +51,5 @@ export const contactCopy = {
   eyebrow: "Contact",
   title: "Let's talk about your growth",
   subtitle:
-    "Tell us where you want to go and we'll show you how to get there. Fill out the form or book a free consultation — whatever's easier.",
+    "Tell us where you want to go and we'll show you how to get there. Fill out the form or book a free consultation, whatever's easier.",
 } as const;

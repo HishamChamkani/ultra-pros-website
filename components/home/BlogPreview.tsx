@@ -17,7 +17,7 @@ export function BlogPreview() {
           <SectionHeading
             eyebrow="From the blog"
             title="Ideas worth your time"
-            subtitle="Practical marketing insight from the team — no filler."
+            subtitle="Practical marketing insight from the team, no filler."
             className="max-w-2xl"
           />
           <Link

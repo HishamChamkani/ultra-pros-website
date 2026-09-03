@@ -15,7 +15,7 @@ export function ServicesOverview() {
           align="center"
           eyebrow="What we do"
           title="Full-funnel marketing, one team"
-          subtitle="Every channel you need to grow — strategized, executed, and reported under one roof."
+          subtitle="Every channel you need to grow, strategized, executed, and reported under one roof."
           className="mx-auto mb-12"
         />
 

@@ -18,7 +18,7 @@ import { contactCopy } from "@/content/contact";
 export const metadata = buildMetadata({
   title: "Contact",
   description:
-    "Get in touch with Ultra Pros. Send us a message or book a free consultation — we'll show you where your next growth wins are hiding.",
+    "Get in touch with Ultra Pros. Send us a message or book a free consultation, we'll show you where your next growth wins are hiding.",
   path: "/contact",
 });
 
@@ -144,7 +144,7 @@ export default function ContactPage() {
             align="center"
             eyebrow="Prefer to talk?"
             title="Book a free consultation"
-            subtitle="Grab a time that works for you — no obligation, no pressure."
+            subtitle="Grab a time that works for you, no obligation, no pressure."
             className="mx-auto mb-10"
           />
           <CalendlyEmbed />

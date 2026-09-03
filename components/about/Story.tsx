@@ -30,10 +30,10 @@ export function Story() {
               Established
             </p>
             <p className="mt-1 font-heading text-6xl font-bold text-white">
-              2018
+              2024
             </p>
             <p className="mt-4 max-w-xs text-white/75">
-              Full-funnel since day one — paid, SEO, social, web, and creative
+              Full-funnel since day one, paid, SEO, social, web, and creative
               under one roof.
             </p>
             <div className="mt-8 flex flex-wrap gap-2">

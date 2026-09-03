@@ -8,7 +8,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Pricing",
   description:
-    "Simple, transparent digital marketing packages from Ultra Pros — Starter, Growth, and Scale. Compare features and find the plan that fits your goals.",
+    "Simple, transparent digital marketing packages from Ultra Pros, Starter, Growth, and Scale. Compare features and find the plan that fits your goals.",
   path: "/pricing",
 });
 
@@ -23,7 +23,7 @@ export default function PricingPage() {
             align="center"
             eyebrow="Pricing"
             title="Plans that scale with you"
-            subtitle="Transparent monthly packages — no setup fees, no long-term lock-in. Pick a starting point and grow from there."
+            subtitle="Transparent monthly packages, no setup fees, no long-term lock-in. Pick a starting point and grow from there."
             className="mx-auto mb-14"
           />
           <PricingTiers />
