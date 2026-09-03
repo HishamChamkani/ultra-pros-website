@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { CaseStudyDetail } from "@/components/portfolio/CaseStudyDetail";
 import { getCaseStudy, caseStudySlugs } from "@/content/case-studies";
+import { getGalleryImages } from "@/lib/portfolio";
 
 type Params = { slug: string };
 
@@ -19,7 +20,7 @@ export async function generateMetadata({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) return {};
 
-  const title = `${caseStudy.client} — ${caseStudy.resultHeadline}`;
+  const title = `${caseStudy.client} — Case Study`;
   return {
     title,
     description: caseStudy.summary,
@@ -41,5 +42,7 @@ export default async function CaseStudyPage({
   const caseStudy = getCaseStudy(slug);
   if (!caseStudy) notFound();
 
-  return <CaseStudyDetail caseStudy={caseStudy} />;
+  const galleryImages = getGalleryImages(caseStudy.slug);
+
+  return <CaseStudyDetail caseStudy={caseStudy} galleryImages={galleryImages} />;
 }

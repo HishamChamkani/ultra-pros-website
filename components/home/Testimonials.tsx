@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Quote } from "lucide-react";
 
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -15,7 +16,9 @@ function initials(name: string) {
 export function Testimonials() {
   return (
     <section className="bg-brand-navy">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      {/* Extra top padding sets Testimonials apart as a new chapter after the
+          Why Ultra Pros / Case Studies block. */}
+      <div className="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 lg:px-8 lg:pb-24 lg:pt-32">
         <SectionHeading
           tone="dark"
           align="center"
@@ -49,6 +52,21 @@ export function Testimonials() {
                     {t.role}, {t.company}
                   </span>
                 </span>
+                {/* Client company logo. On a white chip so dark-ink artwork
+                    stays legible against the navy card; swap the chip for a
+                    plain grayscale logo once white/reversed marks exist.
+                    TODO(client): replace with final vectorized logo assets. */}
+                {t.logo ? (
+                  <span className="ml-auto flex h-9 items-center justify-center rounded-sm bg-white px-2">
+                    <Image
+                      src={t.logo}
+                      alt={`${t.company} logo`}
+                      width={72}
+                      height={24}
+                      className="h-6 w-auto object-contain grayscale"
+                    />
+                  </span>
+                ) : null}
               </figcaption>
             </figure>
           ))}

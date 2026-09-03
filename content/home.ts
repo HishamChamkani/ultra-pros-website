@@ -40,12 +40,15 @@ export type Stat = {
   decimals?: number;
   /** Static text override — renders verbatim instead of the animated count-up. */
   text?: string;
+  /** De-emphasize this stat (smaller, muted) so context stats don't compete
+   *  with the headline metrics. */
+  muted?: boolean;
 };
 
 export const stats: Stat[] = [
   // `text: "2024"` renders the year verbatim (no count-up comma, e.g. "2,024");
-  // label shows as the small gray uppercase caption like the other stats.
-  { value: 2024, text: "2024", label: "Established" },
+  // `muted` shrinks + softens it so it reads as context, not a headline metric.
+  { value: 2024, text: "2024", label: "Established", muted: true },
   { value: 100, suffix: "+", label: "Projects Delivered" },
   { value: 80, suffix: "+", label: "Clients Served" },
   { value: 70, prefix: "$", suffix: "M+", label: "Client Revenue Generated" },
@@ -83,11 +86,11 @@ export const featuredCaseStudies: CaseStudyTeaser[] = [
     result: "12M+ video views",
   },
   {
-    slug: "arfa-karim-incubator",
-    client: "Arfa Karim Technology Incubator",
-    industry: "Information Technology",
-    tags: ["Web & App", "Software & AI"],
-    result: "Incubator platform rebuilt",
+    slug: "ultra-secure",
+    client: "UltraSecure",
+    industry: "Cybersecurity",
+    tags: ["Software & AI", "Branding"],
+    result: "Security platform MVP shipped",
   },
 ];
 
@@ -148,6 +151,8 @@ export type Testimonial = {
   name: string;
   role: string;
   company: string;
+  /** Client logo shown beside the attribution (files in /public/clients). */
+  logo?: string;
 };
 
 // Real client company names; quotes and people are PLACEHOLDER until real
@@ -159,6 +164,7 @@ export const testimonials: Testimonial[] = [
     name: "Sarah Malik",
     role: "Head of Growth",
     company: "HAQ Electronics",
+    logo: "/clients/haq-electronics-logo.png",
   },
   {
     quote:
@@ -166,6 +172,7 @@ export const testimonials: Testimonial[] = [
     name: "David Chen",
     role: "Founder",
     company: "UltraSecure",
+    logo: "/clients/ultra-secure-logo.png",
   },
   {
     quote:
@@ -173,6 +180,7 @@ export const testimonials: Testimonial[] = [
     name: "Ayesha Khan",
     role: "Marketing Director",
     company: "BioGlobal",
+    logo: "/clients/bio-global-logo.png",
   },
   {
     quote:
@@ -180,6 +188,7 @@ export const testimonials: Testimonial[] = [
     name: "Marco Reyes",
     role: "Program Director",
     company: "Arfa Karim Technology Incubator",
+    logo: "/clients/arfa-karim-logo.png",
   },
 ];
 

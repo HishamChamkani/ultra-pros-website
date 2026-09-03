@@ -31,6 +31,9 @@ export interface StatCounterProps {
   decimals?: number;
   /** `light` for light backgrounds (navy number), `dark` for navy sections (yellow number). */
   tone?: "light" | "dark";
+  /** De-emphasize: smaller number + muted color, so a context stat (e.g. the
+   *  founding year) doesn't sit at equal visual weight next to headline metrics. */
+  muted?: boolean;
   className?: string;
 }
 
@@ -48,6 +51,7 @@ export function StatCounter({
   duration = 2,
   decimals = 0,
   tone = "light",
+  muted = false,
   className,
 }: StatCounterProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -79,8 +83,15 @@ export function StatCounter({
     <div ref={ref} className={cn("text-center", className)}>
       <div
         className={cn(
-          "font-heading text-4xl font-bold tracking-tight sm:text-5xl",
-          tone === "dark" ? "text-brand-yellow" : "text-brand-navy",
+          "font-heading font-bold tracking-tight",
+          muted ? "text-2xl sm:text-3xl" : "text-4xl sm:text-5xl",
+          muted
+            ? tone === "dark"
+              ? "text-white/50"
+              : "text-brand-text-secondary"
+            : tone === "dark"
+              ? "text-brand-yellow"
+              : "text-brand-navy",
         )}
       >
         {text ?? (

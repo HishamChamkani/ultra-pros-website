@@ -38,8 +38,10 @@ export function WhyUltraPros() {
             const Icon = valueIcons[value.icon];
             return (
               <Card key={value.title} variant="surface" className="p-6">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-white text-brand-yellow-hover shadow-sm">
-                  <Icon className="h-5 w-5" aria-hidden />
+                {/* Brand-yellow tinted circle gives the icons more visual
+                    weight so they read as custom, not generic outline icons. */}
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-yellow/15 text-brand-yellow-hover">
+                  <Icon className="h-6 w-6" aria-hidden />
                 </span>
                 <h3 className="mt-5 font-heading text-lg font-semibold text-brand-navy">
                   {value.title}

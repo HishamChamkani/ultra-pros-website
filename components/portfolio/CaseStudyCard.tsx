@@ -10,11 +10,11 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <Card hoverable className="group h-full overflow-hidden">
       <Link href={`/portfolio/${caseStudy.slug}`} className="flex h-full flex-col">
-        {/* Cover image — STOCK/PLACEHOLDER asset, not real client work. Replace before launch. */}
+        {/* Cover image — real client asset (next/image optimizes the large source PNGs). */}
         <div className="relative aspect-[16/10] overflow-hidden bg-brand-navy">
           <Image
             src={caseStudy.cover}
-            alt={`${caseStudy.client} — ${caseStudy.resultHeadline}`}
+            alt={`${caseStudy.client} — case study cover`}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -32,11 +32,8 @@ export function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
         </div>
 
         <div className="flex flex-1 flex-col p-5">
-          <p className="font-heading text-sm font-semibold text-brand-navy">
+          <p className="font-heading text-lg font-bold leading-snug text-brand-navy">
             {caseStudy.client}
-          </p>
-          <p className="mt-1 font-heading text-lg font-bold leading-snug text-brand-navy">
-            {caseStudy.resultHeadline}
           </p>
           <p className="mt-2 flex-1 text-sm leading-relaxed text-brand-text-secondary">
             {caseStudy.summary}

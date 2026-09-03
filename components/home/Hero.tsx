@@ -16,7 +16,9 @@ export function Hero() {
         className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-yellow-tint blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-24">
+      {/* Reduced bottom padding tightens the intro cluster (Hero → Trust bar →
+          Stats) into one visual chapter. */}
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-12 pt-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:pb-16 lg:pt-24">
         {/* Copy */}
         <div className="flex flex-col items-start">
           <h1 className="font-heading text-4xl font-bold leading-[1.1] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl">
@@ -50,7 +52,8 @@ export function Hero() {
             client work before public launch. */}
         <div className="relative">
           <div className="relative overflow-hidden rounded-lg border border-brand-border bg-brand-navy shadow-xl">
-            <LogoMark className="pointer-events-none absolute right-5 top-5 z-10 h-7 w-7 opacity-90 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
+            {/* Intentional watermark: low opacity, fixed top-right corner. */}
+            <LogoMark className="pointer-events-none absolute right-4 top-4 z-10 h-8 w-8 opacity-40 drop-shadow-[0_1px_2px_rgba(20,34,50,0.5)]" />
             <video
               className="aspect-[4/3] h-full w-full object-cover"
               autoPlay

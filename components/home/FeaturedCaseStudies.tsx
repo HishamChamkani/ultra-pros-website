@@ -55,10 +55,15 @@ export function FeaturedCaseStudies() {
                 </div>
 
                 <div className="p-5">
-                  <p className="font-heading text-sm font-semibold text-brand-navy">
+                  {/* Client name is a small caption; the metric below is the
+                      dominant element on the card. */}
+                  <p className="font-montserrat text-xs font-medium uppercase tracking-[0.05em] text-brand-text-secondary">
                     {study.client}
                   </p>
-                  <p className="mt-1 font-heading text-lg font-bold leading-snug text-brand-navy">
+                  {/* min-height keeps the metric block a consistent height so the
+                      tag row aligns across all four cards regardless of 1- vs
+                      2-line results. */}
+                  <p className="mt-1 min-h-[3.5rem] font-heading text-2xl font-extrabold leading-tight text-brand-navy">
                     {study.result}
                   </p>
                   <div className="mt-3 flex flex-wrap gap-1.5">

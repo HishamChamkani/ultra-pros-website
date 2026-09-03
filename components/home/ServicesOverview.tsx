@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { serviceIcons } from "@/components/ui/service-icons";
@@ -19,12 +20,28 @@ export function ServicesOverview() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = serviceIcons[service.icon];
+            // First two services (Social Media Marketing, E-commerce Solutions)
+            // are flagship offerings — a persistent yellow border + faint tint
+            // sets them apart from the four standard secondary cards.
+            const isFlagship = index < 2;
             return (
-              <Card key={service.slug} hoverable className="group">
+              <Card
+                key={service.slug}
+                hoverable
+                className={cn(
+                  "group",
+                  isFlagship && "border-brand-yellow bg-brand-yellow-tint/40 shadow-sm",
+                )}
+              >
                 <Link href={service.href} className="block p-6">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-brand-yellow-tint text-brand-navy transition-colors group-hover:bg-brand-yellow">
+                  <span
+                    className={cn(
+                      "inline-flex h-12 w-12 items-center justify-center rounded-md text-brand-navy transition-colors group-hover:bg-brand-yellow",
+                      isFlagship ? "bg-brand-yellow" : "bg-brand-yellow-tint",
+                    )}
+                  >
                     <Icon className="h-6 w-6" aria-hidden />
                   </span>
                   <h3 className="mt-5 font-heading text-xl font-semibold text-brand-navy">

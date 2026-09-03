@@ -29,6 +29,7 @@ export function StatsBand({ stats, tone = "navy", className }: StatsBandProps) {
               text={stat.text}
               decimals={stat.decimals}
               label={stat.label}
+              muted={stat.muted}
             />
           ))}
         </div>
