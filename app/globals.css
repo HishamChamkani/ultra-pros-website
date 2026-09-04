@@ -118,6 +118,60 @@
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
   }
+
+  /* Infinite right-to-left logo marquee (components/home/TrustBar.tsx). The
+     track renders the logo list twice back-to-back; translating it exactly
+     -50% (the width of one copy) loops seamlessly with no visible jump.
+     `.marquee-track` pauses on hover so a viewer can stop on a logo, and the
+     whole thing collapses to a static wrapped row under prefers-reduced-motion. */
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+  .marquee-track {
+    animation: marquee 36s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-mask {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .marquee-track {
+    animation: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Static fallback shows one copy only — hide the duplicated second half. */
+  .marquee-track > [data-marquee-dupe="true"] {
+    display: none;
+  }
 }
 
 @keyframes accordion-down {

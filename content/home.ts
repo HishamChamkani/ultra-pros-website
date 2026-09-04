@@ -22,13 +22,17 @@ export const trustBar = {
   // Real client logos live in /public/clients. `src` points at the current
   // (placeholder-quality) logo files; swap for cleaned/vectorized assets when
   // the client supplies final artwork. `name` doubles as the image alt text.
+  // `boost` = the source file carries extra built-in padding, so it reads
+  // smaller than the rest at a uniform height; bump its display height to
+  // even out the visual weight across the row (see components/home/TrustBar).
   logos: [
     { name: "Arfa Karim Technology Incubator", src: "/clients/arfa-karim-logo.png" },
     { name: "HAQ Electronics", src: "/clients/haq-electronics-logo.png" },
     { name: "BioGlobal", src: "/clients/bio-global-logo.png" },
     { name: "Doxa Fabric Paints", src: "/clients/doxa-fabrics-logo.png" },
-    { name: "Iqra Trading International", src: "/clients/iqra-trading-logo.png" },
-    { name: "UltraSecure", src: "/clients/ultra-secure-logo.png" },
+    { name: "Iqra Trading International", src: "/clients/iqra-trading-logo.png", boost: true },
+    { name: "UltraSecure", src: "/clients/ultra-secure-logo.png", boost: true },
+    { name: "Joya Lumière", src: "/clients/joyalumiere-logo.png" },
   ],
 } as const;
 

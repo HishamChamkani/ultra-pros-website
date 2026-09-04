@@ -26,18 +26,18 @@ export function IndustriesStrip() {
         <p className="text-center font-montserrat text-sm font-medium uppercase tracking-[0.05em] text-brand-text-secondary">
           Industries we serve
         </p>
-        <ul className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-6">
+        <ul className="mx-auto mt-12 grid max-w-5xl grid-cols-2 gap-x-12 gap-y-14 sm:grid-cols-3 lg:grid-cols-6">
           {industriesServed.map((industry) => (
             <li
               key={industry}
-              className="flex flex-col items-center gap-4 text-center"
+              className="flex flex-col items-center gap-6 text-center"
             >
               <Image
                 src={`/industries/${industryImages[industry]}`}
                 alt={industry}
-                width={80}
-                height={80}
-                className="h-14 w-14 object-contain"
+                width={112}
+                height={112}
+                className="h-[88px] w-[88px] object-contain"
               />
               <span className="text-sm font-medium text-brand-navy">
                 {industry}
